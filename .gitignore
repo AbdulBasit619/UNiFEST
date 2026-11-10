@@ -1,0 +1,11 @@
+node_modules/
+.parcel-cache/
+dist/
+
+# compiled by sass (each member compiles locally)
+src/styles/sass
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
