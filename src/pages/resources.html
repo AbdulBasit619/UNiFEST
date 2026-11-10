@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | UNiFEST</title>
+    <meta
+      name="description"
+      content="Venue booking, event rules, downloadable forms and FAQs for organizing events."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/css/general.css" />
+    <link rel="stylesheet" href="../styles/css/resources.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container header__inner">
+        <a
+          class="header__logo"
+          href="../../index.html"
+          aria-label="UNiFEST home"
+        >
+          <span class="header__logo-mark">U</span>UNiFEST
+        </a>
+        <button
+          class="header__burger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <nav class="nav" id="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="../../index.html">Home</a></li>
+            <li><a class="nav__link" href="news.html">News</a></li>
+            <li><a class="nav__link" href="upevents.html">Events</a></li>
+            <li><a class="nav__link" href="societies.html">Societies</a></li>
+            <li>
+              <a
+                class="nav__link nav__link--active"
+                href="resources.html"
+                aria-current="page"
+                >Resources</a
+              >
+            </li>
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--accent btn--sm header__cta" href="#">Sign in</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="resources-title">
+        <div class="container">
+          <div class="section__head">
+            <h1 class="heading_primary" id="resources-title">
+              Everything you need to run an event
+            </h1>
+            <p class="text--lead text--muted">
+              Pick a topic. Each one works a little differently.
+            </p>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Resource categories">
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-venue"
+              aria-selected="true"
+              aria-controls="panel-venue"
+            >
+              <ion-icon name="business-outline"></ion-icon>Venue Booking
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-rules"
+              aria-selected="false"
+              aria-controls="panel-rules"
+            >
+              <ion-icon name="reader-outline"></ion-icon>Event Rules
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-forms"
+              aria-selected="false"
+              aria-controls="panel-forms"
+            >
+              <ion-icon name="document-text-outline"></ion-icon>Forms
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-faqs"
+              aria-selected="false"
+              aria-controls="panel-faqs"
+            >
+              <ion-icon name="chatbubbles-outline"></ion-icon>FAQs
+            </button>
+          </div>
+
+          <!-- 1. Venue floor plan -->
+          <div
+            class="panel"
+            id="panel-venue"
+            role="tabpanel"
+            aria-labelledby="tab-venue"
+          >
+            <p class="panel__intro">
+              Tap a space on the campus plan to see its capacity, facilities and
+              how far ahead to book.
+            </p>
+            <div class="venue">
+              <div class="plan" aria-label="Campus floor plan">
+                <button
+                  class="plan__room plan__room--aud"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Auditorium"
+                  data-capacity="600 seats"
+                  data-type="indoor"
+                  data-facilities="Stage, sound system, projector, AC"
+                  data-lead="3 weeks"
+                >
+                  <span class="plan__room-name">Auditorium</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>600 seats</span
+                  >
+                </button>
+                <button
+                  class="plan__room plan__room--hall"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Main Hall"
+                  data-capacity="400 standing"
+                  data-type="indoor"
+                  data-facilities="Stall power points, AC, PA system"
+                  data-lead="2 weeks"
+                >
+                  <span class="plan__room-name">Main Hall</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>400
+                    standing</span
+                  >
+                </button>
+                <button
+                  class="plan__room plan__room--lawn"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Cafeteria Lawn"
+                  data-capacity="250 people"
+                  data-type="outdoor"
+                  data-facilities="Tent space, power access, nearby food court"
+                  data-lead="1 week"
+                >
+                  <span class="plan__room-name">Cafeteria Lawn</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>250 people</span
+                  >
+                </button>
+                <button
+                  class="plan__room plan__room--sema"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Seminar Hall A"
+                  data-capacity="150 seats"
+                  data-type="indoor"
+                  data-facilities="Projector, whiteboards, AC"
+                  data-lead="1 week"
+                >
+                  <span class="plan__room-name">Seminar Hall A</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>150 seats</span
+                  >
+                </button>
+                <button
+                  class="plan__room plan__room--semb"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Seminar Hall B"
+                  data-capacity="120 seats"
+                  data-type="indoor"
+                  data-facilities="Projector, round-table seating"
+                  data-lead="1 week"
+                >
+                  <span class="plan__room-name">Seminar Hall B</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>120 seats</span
+                  >
+                </button>
+                <button
+                  class="plan__room plan__room--lab"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Computer Lab Block"
+                  data-capacity="80 seats"
+                  data-type="indoor"
+                  data-facilities="80 workstations, fast Wi-Fi"
+                  data-lead="2 weeks"
+                >
+                  <span class="plan__room-name">Computer Lab Block</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>80 seats</span
+                  >
+                </button>
+                <button
+                  class="plan__room plan__room--court"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Indoor Court"
+                  data-capacity="300 spectators"
+                  data-type="indoor"
+                  data-facilities="Marked courts, scoreboard, bleachers"
+                  data-lead="2 weeks"
+                >
+                  <span class="plan__room-name">Indoor Court</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>300
+                    spectators</span
+                  >
+                </button>
+                <button
+                  class="plan__room plan__room--ground"
+                  type="button"
+                  aria-pressed="false"
+                  data-name="Main Ground"
+                  data-capacity="2,000 people"
+                  data-type="outdoor"
+                  data-facilities="Floodlights, stage on request, parking"
+                  data-lead="4 weeks"
+                >
+                  <span class="plan__room-name">Main Ground</span>
+                  <span class="plan__room-cap"
+                    ><ion-icon name="people-outline"></ion-icon>2,000
+                    people</span
+                  >
+                </button>
+              </div>
+              <aside class="venue__detail" aria-live="polite">
+                <h2 class="heading_secondary" data-field="name"></h2>
+                <dl class="venue__detail-list">
+                  <div>
+                    <dt>Capacity</dt>
+                    <dd data-field="capacity"></dd>
+                  </div>
+                  <div>
+                    <dt>Type</dt>
+                    <dd data-field="type"></dd>
+                  </div>
+                  <div>
+                    <dt>Facilities</dt>
+                    <dd data-field="facilities"></dd>
+                  </div>
+                  <div>
+                    <dt>Book at least</dt>
+                    <dd data-field="lead"></dd>
+                  </div>
+                </dl>
+                <a class="btn btn--accent" href="contact.html#proposal"
+                  >Request this venue</a
+                >
+              </aside>
+            </div>
+          </div>
+
+          <!-- 2. Rules timeline -->
+          <div
+            class="panel"
+            id="panel-rules"
+            role="tabpanel"
+            aria-labelledby="tab-rules"
+            hidden
+          >
+            <p class="panel__intro">
+              Follow the rules in the order your event actually happens.
+            </p>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <h3 class="timeline__title">4 weeks before</h3>
+                <ul class="timeline__rules">
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Submit
+                    the event proposal with a faculty advisor's sign-off.
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Choose
+                    a date that doesn't clash with exams or other large events.
+                  </li>
+                </ul>
+              </li>
+              <li class="timeline__item">
+                <h3 class="timeline__title">3 weeks before</h3>
+                <ul class="timeline__rules">
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Book
+                    your venue and equipment through the Events Office.
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Get
+                    your budget approved before spending or signing sponsors.
+                  </li>
+                </ul>
+              </li>
+              <li class="timeline__item">
+                <h3 class="timeline__title">1 week before</h3>
+                <ul class="timeline__rules">
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Publish
+                    your event on UNiFEST with a poster and description.
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>File a
+                    security and first-aid plan for events over 100 people.
+                  </li>
+                </ul>
+              </li>
+              <li class="timeline__item">
+                <h3 class="timeline__title">Event day</h3>
+                <ul class="timeline__rules">
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon
+                    >Register attendees at the entrance and respect venue
+                    capacity.
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Stop
+                    amplified sound by 10 PM and keep exits clear.
+                  </li>
+                </ul>
+              </li>
+              <li class="timeline__item">
+                <h3 class="timeline__title">After the event</h3>
+                <ul class="timeline__rules">
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Submit
+                    a short report and photos within 7 days.
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Return
+                    equipment and leave the venue clean.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <!-- 3. Forms pinboard -->
+          <div
+            class="panel"
+            id="panel-forms"
+            role="tabpanel"
+            aria-labelledby="tab-forms"
+            hidden
+          >
+            <p class="panel__intro">Grab the paperwork off the board.</p>
+            <ul class="pinboard">
+              <li class="paper">
+                <span class="tag tag--accent paper__type">PDF</span>
+                <h3 class="paper__title">Event Proposal Form</h3>
+                <p class="paper__desc">
+                  The first thing every event needs. Fill it in and hand it to
+                  the Events Office.
+                </p>
+                <div class="paper__foot">
+                  <span class="paper__size">120 KB</span>
+                  <a
+                    class="btn btn--ghost btn--sm"
+                    href="../files/event-proposal.pdf"
+                    download
+                    ><ion-icon name="download-outline"></ion-icon>Download</a
+                  >
+                </div>
+              </li>
+              <li class="paper">
+                <span class="tag tag--accent paper__type">DOCX</span>
+                <h3 class="paper__title">Venue Booking Form</h3>
+                <p class="paper__desc">
+                  Request a hall, lawn or ground for your date and expected
+                  crowd.
+                </p>
+                <div class="paper__foot">
+                  <span class="paper__size">48 KB</span>
+                  <a
+                    class="btn btn--ghost btn--sm"
+                    href="../files/venue-booking.docx"
+                    download
+                    ><ion-icon name="download-outline"></ion-icon>Download</a
+                  >
+                </div>
+              </li>
+              <li class="paper">
+                <span class="tag tag--accent paper__type">XLSX</span>
+                <h3 class="paper__title">Budget Template</h3>
+                <p class="paper__desc">
+                  Plan income and expenses with ready-made formulas.
+                </p>
+                <div class="paper__foot">
+                  <span class="paper__size">36 KB</span>
+                  <a
+                    class="btn btn--ghost btn--sm"
+                    href="../files/budget-template.xlsx"
+                    download
+                    ><ion-icon name="download-outline"></ion-icon>Download</a
+                  >
+                </div>
+              </li>
+              <li class="paper">
+                <span class="tag tag--accent paper__type">DOCX</span>
+                <h3 class="paper__title">Sponsorship Letter</h3>
+                <p class="paper__desc">
+                  A polished starting point for approaching sponsors.
+                </p>
+                <div class="paper__foot">
+                  <span class="paper__size">42 KB</span>
+                  <a
+                    class="btn btn--ghost btn--sm"
+                    href="../files/sponsorship-letter.docx"
+                    download
+                    ><ion-icon name="download-outline"></ion-icon>Download</a
+                  >
+                </div>
+              </li>
+              <li class="paper">
+                <span class="tag tag--accent paper__type">PDF</span>
+                <h3 class="paper__title">Risk Checklist</h3>
+                <p class="paper__desc">
+                  Walk through safety, crowd and emergency planning.
+                </p>
+                <div class="paper__foot">
+                  <span class="paper__size">210 KB</span>
+                  <a
+                    class="btn btn--ghost btn--sm"
+                    href="../files/risk-checklist.pdf"
+                    download
+                    ><ion-icon name="download-outline"></ion-icon>Download</a
+                  >
+                </div>
+              </li>
+              <li class="paper">
+                <span class="tag tag--accent paper__type">DOCX</span>
+                <h3 class="paper__title">Post-Event Report</h3>
+                <p class="paper__desc">
+                  Wrap up with numbers, photos and lessons learned.
+                </p>
+                <div class="paper__foot">
+                  <span class="paper__size">55 KB</span>
+                  <a
+                    class="btn btn--ghost btn--sm"
+                    href="../files/post-event-report.docx"
+                    download
+                    ><ion-icon name="download-outline"></ion-icon>Download</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 4. FAQ chat -->
+          <div
+            class="panel"
+            id="panel-faqs"
+            role="tabpanel"
+            aria-labelledby="tab-faqs"
+            hidden
+          >
+            <p class="panel__intro">
+              Ask away. Tap a question and get the answer in the chat.
+            </p>
+            <div class="faq">
+              <div>
+                <p class="faq__label">Popular questions</p>
+                <div class="faq__chips">
+                  <button
+                    class="chip"
+                    type="button"
+                    data-answer="Book at least 3 weeks ahead for halls and 4 weeks for the Main Ground. Popular dates fill up fast."
+                  >
+                    How early should I book a venue?
+                  </button>
+                  <button
+                    class="chip"
+                    type="button"
+                    data-answer="Any registered society, or a group of five or more students with a faculty advisor."
+                  >
+                    Who can propose an event?
+                  </button>
+                  <button
+                    class="chip"
+                    type="button"
+                    data-answer="Societies can request up to Rs 50,000 per event. Sponsorship letters need Events Office sign-off first."
+                  >
+                    Can we get funding?
+                  </button>
+                  <button
+                    class="chip"
+                    type="button"
+                    data-answer="Yes, with a guest pass registered at least 48 hours before the event."
+                  >
+                    Can outsiders attend?
+                  </button>
+                  <button
+                    class="chip"
+                    type="button"
+                    data-answer="Tell the Events Office 48 hours ahead and the booking is released with no penalty."
+                  >
+                    What if we need to cancel?
+                  </button>
+                  <button
+                    class="chip"
+                    type="button"
+                    data-answer="You'll get a reply within 2 working days of submitting your proposal."
+                  >
+                    How long until I hear back?
+                  </button>
+                </div>
+              </div>
+              <div class="chat">
+                <div class="chat__head">
+                  <span class="chat__avatar"
+                    ><ion-icon name="sparkles-outline"></ion-icon
+                  ></span>
+                  <span class="chat__who"
+                    ><strong>Events Office</strong
+                    ><small>Usually answers instantly</small></span
+                  >
+                  <button
+                    class="btn btn--ghost btn--sm chat__reset"
+                    type="button"
+                  >
+                    Clear chat
+                  </button>
+                </div>
+                <div class="chat__log" role="log" aria-live="polite">
+                  <p class="bubble bubble--bot">
+                    Hi! Pick a question on the left and I'll answer it here.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a class="header__logo" href="../../index.html"
+              ><span class="header__logo-mark">U</span>UNiFEST</a
+            >
+            <p class="text--muted" style="margin-top: 1.6rem; max-width: 36rem">
+              Every event at FAST, in one place.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <nav aria-label="Explore">
+            <h4 class="footer__title">Explore</h4>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="news.html">News</a></li>
+              <li><a class="footer__link" href="upevents.html">Events</a></li>
+              <li>
+                <a class="footer__link" href="societies.html">Societies</a>
+              </li>
+              <li>
+                <a class="footer__link" href="resources.html">Resources</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h4 class="footer__title">Contact</h4>
+            <ul class="footer__list">
+              <li>events@unifest.edu.pk</li>
+              <li>+92 51 111 128 128</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title">Find us</h4>
+            <ul class="footer__list">
+              <li>FAST-NUCES, Islamabad</li>
+              <li>Events Office, Block B</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copy">
+          &copy; 2026 UNiFEST. Built for IICT Project, Fall 2026.
+        </p>
+      </div>
+    </footer>
+
+    <!-- THEME TOGGLER -->
+    <button class="toggle" aria-label="Toggle light/dark theme">
+      <ion-icon
+        class="toggle__icon toggle__icon--moon"
+        name="moon-outline"
+      ></ion-icon>
+      <ion-icon
+        class="toggle__icon toggle__icon--sun"
+        name="sunny-outline"
+      ></ion-icon>
+    </button>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/resources.js"></script>
+  </body>
+</html>
