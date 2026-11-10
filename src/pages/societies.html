@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Societies | UNiFEST</title>
+    <meta
+      name="description"
+      content="Meet the leads, explore every club and society, and see the events they run."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/css/general.css" />
+    <link rel="stylesheet" href="../styles/css/societies.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container header__inner">
+        <a
+          class="header__logo"
+          href="../../index.html"
+          aria-label="UNiFEST home"
+        >
+          <span class="header__logo-mark">U</span>UNiFEST
+        </a>
+        <button
+          class="header__burger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <nav class="nav" id="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="../../index.html">Home</a></li>
+            <li><a class="nav__link" href="news.html">News</a></li>
+            <li><a class="nav__link" href="upevents.html">Events</a></li>
+            <li>
+              <a
+                class="nav__link nav__link--active"
+                href="societies.html"
+                aria-current="page"
+                >Societies</a
+              >
+            </li>
+            <li><a class="nav__link" href="resources.html">Resources</a></li>
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--accent btn--sm header__cta" href="#">Sign in</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== 1. LEADS ===== -->
+      <section class="section" aria-labelledby="leads-title">
+        <div class="container">
+          <div class="section__head">
+            <h1 class="heading_primary" id="leads-title">
+              The people running campus life
+            </h1>
+            <p class="text--lead text--muted">
+              Every society has a head. Say hello, or find them at the next
+              event.
+            </p>
+          </div>
+          <ul class="leads">
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=47"
+                alt="Ayesha Khan"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Ayesha Khan</h3>
+                <span class="lead__role">President, Computing Society</span>
+                <span class="lead__meta">Roll no. 23I-0412</span>
+                <span class="lead__meta">BS Computer Science · Batch 2023</span>
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=12"
+                alt="Hamza Ali"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Hamza Ali</h3>
+                <span class="lead__role">President, Robotics Society</span>
+                <span class="lead__meta">Roll no. 22I-0286</span>
+                <span class="lead__meta"
+                  >BS Electrical Engineering · Batch 2022</span
+                >
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=33"
+                alt="Bilal Ahmed"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Bilal Ahmed</h3>
+                <span class="lead__role">Head, Cyber Club</span>
+                <span class="lead__meta">Roll no. 23I-0531</span>
+                <span class="lead__meta">BS Cyber Security · Batch 2023</span>
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=5"
+                alt="Sana Malik"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Sana Malik</h3>
+                <span class="lead__role">President, Literary Society</span>
+                <span class="lead__meta">Roll no. 22I-0174</span>
+                <span class="lead__meta">BBA · Batch 2022</span>
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=9"
+                alt="Zainab Raza"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Zainab Raza</h3>
+                <span class="lead__role">Head, Cultural Society</span>
+                <span class="lead__meta">Roll no. 23I-0348</span>
+                <span class="lead__meta"
+                  >BS Software Engineering · Batch 2023</span
+                >
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=15"
+                alt="Usman Tariq"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Usman Tariq</h3>
+                <span class="lead__role">President, Sports Society</span>
+                <span class="lead__meta">Roll no. 21I-0097</span>
+                <span class="lead__meta">BS Data Science · Batch 2021</span>
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=44"
+                alt="Hira Noor"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Hira Noor</h3>
+                <span class="lead__role">Head, Fitness Club</span>
+                <span class="lead__meta">Roll no. 24I-0219</span>
+                <span class="lead__meta"
+                  >BS Artificial Intelligence · Batch 2024</span
+                >
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=52"
+                alt="Ali Raza"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Ali Raza</h3>
+                <span class="lead__role"
+                  >President, Social Welfare Society</span
+                >
+                <span class="lead__meta">Roll no. 22I-0405</span>
+                <span class="lead__meta">BS Computer Science · Batch 2022</span>
+              </div>
+            </li>
+            <li class="lead">
+              <img
+                class="lead__img"
+                src="https://i.pravatar.cc/300?img=25"
+                alt="Maryam Iqbal"
+                loading="lazy"
+              />
+              <div class="lead__info">
+                <h3 class="lead__name">Maryam Iqbal</h3>
+                <span class="lead__role">Head, Green Campus</span>
+                <span class="lead__meta">Roll no. 24I-0063</span>
+                <span class="lead__meta">BBA · Batch 2024</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== 2. DIRECTORY ===== -->
+      <section class="section" aria-labelledby="directory-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="heading_secondary" id="directory-title">
+              Clubs and societies
+            </h2>
+            <p class="text--lead text--muted">
+              Hover over a card, or tap it, to see what the society is about.
+            </p>
+          </div>
+          <ul class="directory">
+            <li>
+              <article class="society" data-category="technical" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="laptop-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Computing Society</h3>
+                    <span class="society__cat">Technical</span>
+                  </div>
+                  <a
+                    class="society__contact"
+                    href="mailto:computing@unifest.edu.pk"
+                    >computing@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Coders, builders and tinkerers shipping real projects
+                    together.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="technical" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="hardware-chip-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Robotics Society</h3>
+                    <span class="society__cat">Technical</span>
+                  </div>
+                  <a
+                    class="society__contact"
+                    href="mailto:robotics@unifest.edu.pk"
+                    >robotics@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    We design, build and battle robots from scratch every
+                    semester.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="technical" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="shield-checkmark-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Cyber Club</h3>
+                    <span class="society__cat">Technical</span>
+                  </div>
+                  <a class="society__contact" href="mailto:cyber@unifest.edu.pk"
+                    >cyber@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Learn to hack ethically through CTFs, labs and weekly
+                    challenges.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="arts" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="book-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Literary Society</h3>
+                    <span class="society__cat">Arts</span>
+                  </div>
+                  <a
+                    class="society__contact"
+                    href="mailto:literary@unifest.edu.pk"
+                    >literary@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Poetry, debate and storytelling for anyone with something to
+                    say.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="arts" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="color-palette-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Cultural Society</h3>
+                    <span class="society__cat">Arts</span>
+                  </div>
+                  <a
+                    class="society__contact"
+                    href="mailto:cultural@unifest.edu.pk"
+                    >cultural@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Music, dance and theatre that celebrate every culture on
+                    campus.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="sports" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="football-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Sports Society</h3>
+                    <span class="society__cat">Sports</span>
+                  </div>
+                  <a
+                    class="society__contact"
+                    href="mailto:sports@unifest.edu.pk"
+                    >sports@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Inter-department leagues, trials and tournaments all year
+                    round.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="sports" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="barbell-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Fitness Club</h3>
+                    <span class="society__cat">Sports</span>
+                  </div>
+                  <a
+                    class="society__contact"
+                    href="mailto:fitness@unifest.edu.pk"
+                    >fitness@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Group workouts, runs and challenges to keep campus moving.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="welfare" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="heart-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Social Welfare Society</h3>
+                    <span class="society__cat">Social Welfare</span>
+                  </div>
+                  <a
+                    class="society__contact"
+                    href="mailto:welfare@unifest.edu.pk"
+                    >welfare@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Fundraisers and volunteer drives that put students to work
+                    for good.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="society" data-category="welfare" tabindex="0">
+                <div class="society__front">
+                  <span class="society__icon"
+                    ><ion-icon name="leaf-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h3 class="society__name">Green Campus</h3>
+                    <span class="society__cat">Social Welfare</span>
+                  </div>
+                  <a class="society__contact" href="mailto:green@unifest.edu.pk"
+                    >green@unifest.edu.pk</a
+                  >
+                </div>
+                <div class="society__about">
+                  <p>
+                    Tree drives, recycling and a cleaner, greener campus for
+                    everyone.
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== 3. EVENTS BY SOCIETIES ===== -->
+      <section class="section" aria-labelledby="schedule-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="heading_secondary" id="schedule-title">
+              Events our societies are running
+            </h2>
+          </div>
+          <ul class="schedule">
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-11-28">28 Nov</time>
+              <h3 class="schedule__title">Code Rush Hackathon</h3>
+              <span class="schedule__by">Computing Society</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Lab 3</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-11-29">29 Nov</time>
+              <h3 class="schedule__title">Tree Plantation Drive</h3>
+              <span class="schedule__by">Green Campus</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Main Ground</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-12-03">3 Dec</time>
+              <h3 class="schedule__title">Inter-Dept Cricket Cup</h3>
+              <span class="schedule__by">Sports Society</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Main Ground</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-12-05">5 Dec</time>
+              <h3 class="schedule__title">Robo Wars</h3>
+              <span class="schedule__by">Robotics Society</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Workshop
+                Arena</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-12-06">6 Dec</time>
+              <h3 class="schedule__title">Open Mic Night</h3>
+              <span class="schedule__by">Literary Society</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Auditorium</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-12-09">9 Dec</time>
+              <h3 class="schedule__title">Cyber Defense CTF</h3>
+              <span class="schedule__by">Cyber Club</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Lab 5</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-12-14">14 Dec</time>
+              <h3 class="schedule__title">Winter Charity Drive</h3>
+              <span class="schedule__by">Social Welfare Society</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Cafeteria
+                Lawn</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-12-18">18 Dec</time>
+              <h3 class="schedule__title">Cultural Night</h3>
+              <span class="schedule__by">Cultural Society</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Main Ground
+                Stage</span
+              >
+            </li>
+            <li class="schedule__row">
+              <time class="schedule__date" datetime="2026-12-20">20 Dec</time>
+              <h3 class="schedule__title">Campus Marathon 5K</h3>
+              <span class="schedule__by">Fitness Club</span>
+              <span class="schedule__venue"
+                ><ion-icon name="location-outline"></ion-icon>Main Gate</span
+              >
+            </li>
+          </ul>
+          <div class="schedule__more">
+            <a class="btn btn--ghost" href="upevents.html"
+              >See full event details</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a class="header__logo" href="../../index.html"
+              ><span class="header__logo-mark">U</span>UNiFEST</a
+            >
+            <p class="text--muted" style="margin-top: 1.6rem; max-width: 36rem">
+              Every event at FAST, in one place.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <nav aria-label="Explore">
+            <h4 class="footer__title">Explore</h4>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="news.html">News</a></li>
+              <li><a class="footer__link" href="upevents.html">Events</a></li>
+              <li>
+                <a class="footer__link" href="societies.html">Societies</a>
+              </li>
+              <li>
+                <a class="footer__link" href="resources.html">Resources</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h4 class="footer__title">Contact</h4>
+            <ul class="footer__list">
+              <li>events@unifest.edu.pk</li>
+              <li>+92 51 111 128 128</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title">Find us</h4>
+            <ul class="footer__list">
+              <li>FAST-NUCES, Islamabad</li>
+              <li>Events Office, Block B</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copy">
+          &copy; 2026 UNiFEST. Built for IICT Project, Fall 2026.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Floating theme toggle -->
+    <button class="toggle" aria-label="Toggle light/dark theme">
+      <ion-icon
+        class="toggle__icon toggle__icon--moon"
+        name="moon-outline"
+      ></ion-icon>
+      <ion-icon
+        class="toggle__icon toggle__icon--sun"
+        name="sunny-outline"
+      ></ion-icon>
+    </button>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>
