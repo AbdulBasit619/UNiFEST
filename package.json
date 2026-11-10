@@ -1,5 +1,5 @@
 {
-  "name": "UNiFEST",
+  "name": "unifest",
   "version": "1.0.0",
   "description": "UNiFEST - University Events Website",
   "browserslist": [
@@ -8,17 +8,20 @@
     "not dead"
   ],
   "scripts": {
-    "sass": "sass src/styles/sass:src/styles/css --no-source-map",
-    "watch:sass": "sass src/styles/sass:src/styles/css --no-source-map --watch",
-    "prefix:css": "postcss src/styles/css/*.css --use autoprefixer --no-map --replace",
-    "build:css": "run-s sass prefix:css",
-    "serve": "parcel index.html src/pages/*.html",
-    "dev": "run-p watch:sass serve",
-    "build": "run-s build:css build:site",
-    "build:site": "parcel build index.html src/pages/*.html --dist-dir ./dist --public-url ./"
+    "start": "npm-run-all sass:dev --parallel watch:sass serve",
+    "serve": "parcel index.html \"src/pages/*.html\"",
+    "sass:dev": "sass src/styles/sass:src/styles/css",
+    "watch:sass": "sass src/styles/sass:src/styles/css --watch",
+    "compile:css": "sass src/styles/sass:src/styles/css --no-source-map",
+    "prefix:css": "postcss \"src/styles/css/*.css\" --use autoprefixer --no-map --replace",
+    "compress:css": "postcss \"src/styles/css/*.css\" --use cssnano --no-map --replace",
+    "build:css": "run-s compile:css prefix:css compress:css",
+    "build:site": "parcel build index.html \"src/pages/*.html\" --dist-dir dist --public-url ./",
+    "build": "run-s build:css build:site"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "cssnano": "^9.9.0",
     "npm-run-all2": "^8.0.0",
     "parcel": "^2.16.4",
     "postcss": "^8.5.6",
