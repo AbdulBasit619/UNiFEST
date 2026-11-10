@@ -4,6 +4,9 @@ dist/
 
 # compiled by sass (each member compiles locally)
 src/styles/sass
+src/styles/css/*.css.map
+
+
 .env
 .env.*
 *.log
