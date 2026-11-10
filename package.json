@@ -1,0 +1,44 @@
+{
+  "name": "UNiFEST",
+  "version": "1.0.0",
+  "description": "UNiFEST - University Events Website",
+  "browserslist": [
+    "last 10 versions",
+    "> 0.5%",
+    "not dead"
+  ],
+  "scripts": {
+    "sass": "sass src/styles/sass:src/styles/css --no-source-map",
+    "watch:sass": "sass src/styles/sass:src/styles/css --no-source-map --watch",
+    "prefix:css": "postcss src/styles/css/*.css --use autoprefixer --no-map --replace",
+    "build:css": "run-s sass prefix:css",
+    "serve": "parcel index.html src/pages/*.html",
+    "dev": "run-p watch:sass serve",
+    "build": "run-s build:css build:site",
+    "build:site": "parcel build index.html src/pages/*.html --dist-dir ./dist --public-url ./"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "npm-run-all2": "^8.0.0",
+    "parcel": "^2.16.4",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.93.0"
+  },
+  "allowScripts": {
+    "lmdb@2.8.5": true,
+    "@swc/core@1.16.22": true,
+    "msgpackr-extract@3.0.7": true,
+    "@parcel/watcher@2.6.0": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulBasit619/UNiFEST.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AbdulBasit619/UNiFEST/issues"
+  },
+  "homepage": "https://github.com/AbdulBasit619/UNiFEST#readme"
+}
