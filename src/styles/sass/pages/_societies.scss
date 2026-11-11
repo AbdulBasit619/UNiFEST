@@ -1,0 +1,237 @@
+@use 'sass:color';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/*  1. LEADS  */
+.leads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $sp--4;
+  @include respond(tablet_land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lead {
+  display: flex;
+  align-items: center;
+  gap: $sp--4;
+  padding: $sp--4;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: $br--lg;
+  transition:
+    transform $tr--smooth,
+    border-color $tr--fast;
+  &:hover {
+    transform: translateY(-0.4rem);
+    border-color: var(--c-accent);
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.4rem solid var(--c-accent);
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--1;
+  }
+  &__name {
+    font-size: $fsz--md;
+  }
+  &__role {
+    font-weight: $fw--bold;
+    color: var(--c-highlight);
+  }
+  &__meta {
+    font-size: $fsz--sm;
+    color: var(--c-muted);
+  }
+}
+
+/* 2. DIRECTORY  */
+.directory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $sp--5;
+  @include respond(tablet_land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.society {
+  --cat: #{$color--secondary};
+  --icon-br: #{$br--default};
+  position: relative;
+  min-height: 26rem;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--cat) 20%, var(--c-surface)),
+    var(--c-surface) 70%
+  );
+  border: 1px solid color-mix(in srgb, var(--cat) 45%, var(--c-border));
+  border-radius: $br--lg;
+  transition:
+    transform $tr--smooth,
+    box-shadow $tr--smooth,
+    border-color $tr--fast;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-0.6rem);
+    box-shadow: var(--shadow);
+    border-color: var(--cat);
+  }
+
+  @each $name, $color, $radius in (technical, $color--secondary, $br--sm),
+    (arts, $color--accent, 50%),
+    (sports, color.mix($color--accent, $color--gray, 55%), $br--lg),
+    (welfare, color.mix($color--secondary, $color--gray, 55%), 50% 50% 50% 0)
+  {
+    &[data-category='#{$name}'] {
+      --cat: #{$color};
+      --icon-br: #{$radius};
+    }
+  }
+
+  &__front,
+  &__about {
+    position: absolute;
+    inset: 0;
+    padding: $sp--5;
+    transition:
+      opacity 0.4s ease,
+      transform $tr--smooth;
+  }
+
+  &__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &:hover &__front,
+  &:focus-visible &__front {
+    opacity: 0;
+    transform: translateY(-1.6rem);
+  }
+
+  &__about {
+    display: flex;
+    align-items: center;
+    font-size: $fsz--md;
+    line-height: $lh--normal;
+    opacity: 0;
+    transform: translateY(1.6rem);
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  &:hover &__about,
+  &:focus-visible &__about {
+    opacity: 1;
+    transform: none;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.4rem;
+    height: 6.4rem;
+    font-size: $fsz--xl;
+    color: var(--c-on-accent);
+    background: var(--cat);
+    border-radius: var(--icon-br);
+  }
+  &__name {
+    font-size: $fsz--xl;
+  }
+  &__cat {
+    display: inline-flex;
+    align-items: center;
+    gap: $sp--2;
+    font-size: $fsz--sm;
+    font-weight: $fw--bold;
+    color: var(--c-muted);
+  }
+  &__cat::before {
+    content: '';
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: var(--cat);
+  }
+  &__contact {
+    font-size: $fsz--sm;
+    color: var(--c-muted);
+  }
+}
+
+/* 3. EVENTE BY SOCIETIES */
+.schedule {
+  border-top: 1px solid var(--c-border);
+}
+
+.schedule__row {
+  display: grid;
+  grid-template-columns: 12rem 1fr 22rem 18rem;
+  align-items: center;
+  gap: $sp--4;
+  padding: $sp--4 $sp--3;
+  border-bottom: 1px solid var(--c-border);
+  transition:
+    background $tr--fast,
+    padding-left $tr--smooth;
+  &:hover {
+    background: var(--c-surface);
+    padding-left: $sp--5;
+  }
+  @include respond(tablet) {
+    grid-template-columns: 10rem 1fr;
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    gap: $sp--2;
+  }
+
+  .schedule__date {
+    font-family: $ff--headings;
+    font-size: $fsz--lg;
+    font-weight: $fw--black;
+    color: var(--c-highlight);
+  }
+  .schedule__title {
+    font-size: $fsz--md;
+  }
+  .schedule__by {
+    color: var(--c-muted);
+  }
+  .schedule__venue {
+    display: flex;
+    align-items: center;
+    gap: $sp--2;
+    color: var(--c-muted);
+  }
+}
+
+.schedule__more {
+  display: flex;
+  justify-content: center;
+  margin-top: $sp--6;
+}

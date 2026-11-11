@@ -1,0 +1,192 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section[id] {
+  scroll-margin-top: 8.8rem;
+}
+
+/* FORM CARD */
+.form-card {
+  padding: $sp--6;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: $br--lg;
+  @include respond(phone) {
+    padding: $sp--4;
+  }
+}
+
+.form--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $sp--3 $sp--5;
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  .form__field--wide,
+  .form__success,
+  .btn {
+    grid-column: 1 / -1;
+  }
+}
+
+.form__check {
+  display: flex;
+  align-items: center;
+  gap: $sp--3;
+}
+.form__check input {
+  width: 2.2rem;
+  height: 2.2rem;
+  accent-color: var(--c-accent);
+}
+
+/* 1. Feedback */
+.feedback {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: $sp--7;
+  align-items: start;
+  @include respond(tablet_land) {
+    grid-template-columns: 1fr;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--4;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--3;
+    margin-top: $sp--3;
+  }
+  &__links li {
+    display: flex;
+    align-items: center;
+    gap: $sp--3;
+    font-weight: $fw--medium;
+  }
+  &__links ion-icon {
+    font-size: $fsz--lg;
+    color: var(--c-highlight);
+  }
+}
+
+// RATING PILLS
+.rating {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $sp--2;
+  border: 0;
+
+  legend {
+    margin-bottom: $sp--2;
+    font-weight: $fw--bold;
+    font-size: $fsz--sm;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    font-weight: $fw--bold;
+    border: 2px solid var(--c-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+      background $tr--fast,
+      border-color $tr--fast,
+      transform $tr--fast;
+    &:hover {
+      border-color: var(--c-text);
+    }
+  }
+  input:checked + label {
+    background: var(--c-accent);
+    color: var(--c-on-accent);
+    border-color: transparent;
+    transform: scale(1.1);
+  }
+  input:focus-visible + label {
+    outline: 0.3rem solid var(--c-accent);
+    outline-offset: 0.3rem;
+  }
+}
+
+/* 2. Proposal  */
+.section--proposal {
+  background: var(--c-surface);
+  border-block: 1px solid var(--c-border);
+}
+.section--proposal .form-card {
+  background: var(--c-bg);
+}
+
+/* 3. LOCATION */
+.location {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: $sp--5;
+  @include respond(tablet_land) {
+    grid-template-columns: 1fr;
+  }
+
+  &__map {
+    min-height: 48rem;
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    border-radius: $br--lg;
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 48rem;
+      border: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--3;
+  }
+}
+
+.info {
+  display: flex;
+  gap: $sp--3;
+  padding: $sp--4;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: $br--default;
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: $fsz--lg;
+    color: var(--c-on-accent);
+    background: var(--c-accent);
+    border-radius: $br--sm;
+  }
+  &__title {
+    margin-bottom: $sp--1;
+    font-size: $fsz--md;
+  }
+  &__text {
+    color: var(--c-muted);
+  }
+}

@@ -1,0 +1,13 @@
+// general.css - global + shared (loaded on EVERY page)
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'base/theme';
+@use 'base/base';
+@use 'base/typography';
+@use 'utils/utilities';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'components/buttons';
+@use 'components/modal';
+@use 'components/forms';
+@use 'components/tabs';

@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading_primary,
+.heading_secondary,
+.heading_tertiary {
+  font-family: $ff--headings;
+  font-weight: $fw--black;
+  line-height: $lh--headings;
+  letter-spacing: -0.02em;
+}
+
+.heading_primary {
+  font-size: $fsz--4xl;
+  @include respond(laptop) {
+    font-size: $fsz--3xl;
+  }
+  @include respond(phone) {
+    font-size: $fsz--2xl;
+  }
+}
+
+.heading_secondary {
+  font-size: $fsz--2xl;
+  @include respond(phone) {
+    font-size: $fsz--xl;
+  }
+}
+
+.heading_tertiary {
+  font-size: $fsz--lg;
+  font-weight: $fw--bold;
+}
+
+.text--muted {
+  color: var(--c-muted);
+}
+.text--lead {
+  font-size: $fsz--md;
+  max-width: $mxw--text;
+}
