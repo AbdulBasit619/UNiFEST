@@ -1,0 +1,111 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--c-bg) 82%, transparent);
+  backdrop-filter: blur(1.6rem);
+  border-bottom: 1px solid var(--c-border);
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $sp--5;
+    height: 8.8rem;
+  }
+
+  // Swap the mark for your Adobe Express logo: <img class="header__logo-img">
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $sp--2;
+    font-family: $ff--headings;
+    font-size: $fsz--lg;
+    font-weight: $fw--black;
+    letter-spacing: -0.03em;
+    &:hover .header__logo-mark {
+      transform: rotate(6deg) scale(1.08);
+    }
+  }
+  &__logo-mark {
+    @include flex-center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: $br--sm;
+    background: var(--c-brand);
+    color: $color--white;
+    transform: rotate(-6deg);
+    transition: transform $tr--smooth;
+  }
+  &__logo-img {
+    height: 4rem;
+  }
+
+  &__burger {
+    display: none;
+    @include flex-center;
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: $fsz--lg;
+    background: none;
+    border: 1px solid var(--c-border);
+    border-radius: $br--sm;
+    @include respond(tablet) {
+      display: flex;
+    }
+  }
+
+  &__cta {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  margin-left: auto;
+
+  &__list {
+    display: flex;
+    gap: $sp--2;
+  }
+
+  &__link {
+    display: block;
+    padding: $sp--2 $sp--3;
+    font-weight: $fw--medium;
+    border-radius: $br--pill;
+    transition: background $tr--fast;
+    &:hover {
+      background: var(--c-surface-2);
+    }
+    &--active,
+    &--active:hover {
+      background: var(--c-accent);
+      color: var(--c-on-accent);
+      font-weight: $fw--bold;
+    }
+  }
+
+  @include respond(tablet) {
+    position: absolute;
+    top: 100%;
+    left: -$sp--5;
+    right: -$sp--5;
+    margin: 0;
+    padding: $sp--3 $sp--5 $sp--5;
+    background: var(--c-bg);
+    border-bottom: 1px solid var(--c-border);
+    display: none;
+    &.is-open {
+      display: block;
+    }
+    &__list {
+      flex-direction: column;
+    }
+  }
+}

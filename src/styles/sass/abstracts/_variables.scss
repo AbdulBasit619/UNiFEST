@@ -1,0 +1,56 @@
+// Colors (4 core + white neutral). Every other shade is a tint/mix of these.
+$color--primary: #0a0b1f;
+$color--secondary: #ff3d7f;
+$color--accent: #ffc933;
+$color--gray: #9a9cb8;
+$color--white: #ffffff;
+
+// Typography
+$ff--headings: 'Bricolage Grotesque', display, sans-serif;
+$ff--body: 'DM Sans', calibri, sans-serif;
+
+// Type scale (html = 10px, 1rem = 10px) - ratio ~1.25
+$fsz--xs: 1.2rem;
+$fsz--sm: 1.4rem;
+$fsz--p: 1.6rem;
+$fsz--md: 2rem;
+$fsz--lg: 2.4rem;
+$fsz--xl: 3.2rem;
+$fsz--2xl: 4.8rem;
+$fsz--3xl: 6.4rem;
+$fsz--4xl: 8.8rem;
+
+// Font weights
+$fw--normal: 400;
+$fw--medium: 500;
+$fw--bold: 700;
+$fw--black: 800;
+
+// Line height
+$lh--normal: 1.6;
+$lh--headings: 1.1;
+
+// Spacing (4pt-based)
+$sp--1: 0.4rem;
+$sp--2: 0.8rem;
+$sp--3: 1.6rem;
+$sp--4: 2.4rem;
+$sp--5: 3.2rem;
+$sp--6: 4.8rem;
+$sp--7: 6.4rem;
+$sp--8: 9.6rem;
+$sp--9: 12.8rem;
+
+// Border radius
+$br--sm: 0.8rem;
+$br--default: 1.6rem;
+$br--lg: 2.8rem;
+$br--pill: 99rem;
+
+// Container widths
+$mxw--desktop_large: 144rem;
+$mxw--text: 64rem;
+
+// Transitions
+$tr--fast: 0.2s ease;
+$tr--smooth: 0.45s cubic-bezier(0.22, 1, 0.36, 1);

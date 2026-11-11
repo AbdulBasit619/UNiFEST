@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+// Desktop-first: design for 1920px, then scale DOWN
+$breakpoints: (
+  laptop: 87.5em,
+  tablet_land: 68.75em,
+  tablet: 56.25em,
+  phone: 37.5em,
+);
+
+@mixin respond($bp) {
+  @media (max-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

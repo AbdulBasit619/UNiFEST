@@ -1,0 +1,33 @@
+@use 'sass:color';
+@use '../abstracts/variables' as *;
+
+// Dark (default) - built primarily in dark mode
+:root {
+  color-scheme: dark;
+  --c-bg: #{$color--primary};
+  --c-surface: #{color.mix($color--gray, $color--primary, 9%)};
+  --c-surface-2: #{color.mix($color--gray, $color--primary, 17%)};
+  --c-border: #{color.mix($color--gray, $color--primary, 26%)};
+  --c-text: #{$color--white};
+  --c-muted: #{$color--gray};
+  --c-brand: #{$color--secondary};
+  --c-accent: #{$color--accent};
+  --c-on-accent: #{$color--primary};
+  --c-highlight: #{$color--accent};
+  --shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.5);
+  --shadow-hard: 0.6rem 0.6rem 0 var(--c-brand);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --c-bg: #{color.mix($color--secondary, $color--white, 4%)};
+  --c-surface: #{$color--white};
+  --c-surface-2: #{color.mix($color--secondary, $color--white, 9%)};
+  --c-border: #{color.mix($color--primary, $color--white, 14%)};
+  --c-text: #{$color--primary};
+  --c-muted: #{color.mix($color--primary, $color--gray, 45%)};
+  --c-brand: #{color.mix($color--secondary, $color--primary, 88%)};
+  --c-highlight: #{color.mix($color--secondary, $color--primary, 88%)};
+  --shadow: 0 2.4rem 6.4rem rgba(10, 11, 31, 0.12);
+  --shadow-hard: 0.6rem 0.6rem 0 var(--c-accent);
+}

@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $sp--4;
+  width: 100%;
+  text-align: left;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--2;
+  }
+  &__label {
+    font-weight: $fw--bold;
+    font-size: $fsz--sm;
+  }
+  &__input {
+    padding: $sp--3 $sp--4;
+    background: var(--c-bg);
+    border: 2px solid var(--c-border);
+    border-radius: $br--default;
+    transition: border-color $tr--fast;
+    &:focus {
+      outline: none;
+      border-color: var(--c-accent);
+    }
+    &[aria-invalid='true'] {
+      border-color: var(--c-brand);
+    }
+  }
+  &__error {
+    min-height: 1.8rem;
+    font-size: $fsz--sm;
+    color: var(--c-brand);
+  }
+  &__success {
+    padding: $sp--4;
+    text-align: center;
+    font-weight: $fw--bold;
+    background: var(--c-accent);
+    color: var(--c-on-accent);
+    border-radius: $br--default;
+  }
+}

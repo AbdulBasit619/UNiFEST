@@ -1,0 +1,464 @@
+@use 'sass:list';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.panel {
+  animation: panel-in 0.5s $tr--smooth;
+  &[hidden] {
+    display: none;
+  }
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(2.4rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.panel__intro {
+  max-width: $mxw--text;
+  margin-bottom: $sp--6;
+  color: var(--c-muted);
+  font-size: $fsz--md;
+}
+
+/* 1. VENUE BOOKING: Interactive Campus Floor Plan */
+$rooms: aud, hall, lawn, sema, semb, lab, court, ground;
+
+.venue {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: $sp--5;
+  @include respond(tablet_land) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plan {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    'aud    aud    aud    hall   hall   lawn   lawn   lawn'
+    'aud    aud    aud    hall   hall   lawn   lawn   lawn'
+    'sema   sema   semb   semb   lab    lab    court  court'
+    'ground ground ground ground ground ground court  court';
+  gap: $sp--2;
+  min-height: 54rem;
+  padding: $sp--4;
+  background-color: var(--c-surface);
+  background-image:
+    linear-gradient(var(--c-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--c-border) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  border: 1px solid var(--c-border);
+  border-radius: $br--lg;
+
+  @include respond(tablet) {
+    grid-template-areas: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-auto-rows: 14rem;
+    min-height: 0;
+  }
+}
+
+.plan__room {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $sp--3;
+  text-align: left;
+  background: var(--c-bg);
+  border: 2px dashed var(--c-border);
+  border-radius: $br--default;
+  transition:
+    background $tr--fast,
+    border-color $tr--fast,
+    transform $tr--fast;
+
+  &:hover {
+    border-color: var(--c-text);
+  }
+  &[aria-pressed='true'] {
+    background: var(--c-accent);
+    color: var(--c-on-accent);
+    border: 2px solid var(--c-accent);
+    transform: scale(1.02);
+  }
+  &[data-type='outdoor'] {
+    border-style: dotted;
+    border-color: var(--c-highlight);
+  }
+
+  @each $r in $rooms {
+    &--#{$r} {
+      grid-area: $r;
+    }
+  }
+  @include respond(tablet) {
+    @each $r in $rooms {
+      &--#{$r} {
+        grid-area: auto;
+      }
+    }
+  }
+
+  &-name {
+    font-family: $ff--headings;
+    font-size: $fsz--md;
+    font-weight: $fw--black;
+    line-height: $lh--headings;
+  }
+  &-cap {
+    display: flex;
+    align-items: center;
+    gap: $sp--1;
+    font-size: $fsz--sm;
+    font-weight: $fw--bold;
+  }
+}
+
+.venue__detail {
+  position: sticky;
+  top: 11rem;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: $sp--4;
+  padding: $sp--5;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-top: 0.8rem solid var(--c-accent);
+  border-radius: $br--lg;
+  @include respond(tablet_land) {
+    position: static;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--3;
+  }
+  &-list dt {
+    font-size: $fsz--sm;
+    color: var(--c-muted);
+  }
+  &-list dd {
+    font-weight: $fw--bold;
+  }
+}
+
+/* 2. EVENT RULES: Zig-zag Timeline Of The Event Lifecycle */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: $sp--6;
+  counter-reset: step;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0.4rem;
+    background: repeating-linear-gradient(
+      var(--c-border) 0 1.2rem,
+      transparent 1.2rem 2rem
+    );
+    transform: translateX(-50%);
+    @include respond(tablet) {
+      left: 2.8rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: calc(50% - #{$sp--6});
+    padding: $sp--5;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: $br--lg;
+    counter-increment: step;
+
+    &:nth-child(odd) {
+      justify-self: start;
+    }
+    &:nth-child(even) {
+      justify-self: end;
+    }
+
+    // Numbered marker sits on the Center line
+    &::before {
+      content: counter(step);
+      position: absolute;
+      top: $sp--4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5.6rem;
+      height: 5.6rem;
+      font-family: $ff--headings;
+      font-size: $fsz--lg;
+      font-weight: $fw--black;
+      color: var(--c-on-accent);
+      background: var(--c-accent);
+      border: 0.6rem solid var(--c-bg);
+      border-radius: 50%;
+    }
+    &:nth-child(odd)::before {
+      right: calc(-#{$sp--6} - 2.8rem);
+    }
+    &:nth-child(even)::before {
+      left: calc(-#{$sp--6} - 2.8rem);
+    }
+
+    @include respond(tablet) {
+      width: calc(100% - 8rem);
+      &:nth-child(odd),
+      &:nth-child(even) {
+        justify-self: end;
+      }
+      &:nth-child(odd)::before,
+      &:nth-child(even)::before {
+        left: -8rem;
+        right: auto;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: $sp--3;
+    font-size: $fsz--lg;
+  }
+  &__rules {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--2;
+  }
+  &__rules li {
+    display: flex;
+    gap: $sp--2;
+    color: var(--c-muted);
+  }
+  &__rules ion-icon {
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+    font-size: $fsz--md;
+    color: var(--c-highlight);
+  }
+}
+
+/* 3. FORMS: Pinboard Of Tilted Paper Forms */
+$tilts:
+  -2.5deg,
+  1.8deg,
+  -1deg,
+  2.2deg,
+  -1.8deg,
+  1.2deg;
+
+.pinboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $sp--7 $sp--5;
+  padding: $sp--7 $sp--6;
+  background-color: var(--c-surface);
+  background-image: radial-gradient(var(--c-border) 0.2rem, transparent 0.2rem);
+  background-size: 2.4rem 2.4rem;
+  border: 1px solid var(--c-border);
+  border-radius: $br--lg;
+  @include respond(tablet_land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    padding: $sp--6 $sp--3;
+  }
+}
+
+.paper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $sp--3;
+  padding: $sp--6 $sp--4 $sp--4;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: $br--sm;
+  box-shadow: var(--shadow);
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform $tr--smooth;
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      --tilt: #{list.nth($tilts, $i)};
+    }
+  }
+
+  &:hover {
+    transform: rotate(0deg) translateY(-0.8rem);
+  }
+
+  // Pin
+  &::before {
+    content: '';
+    position: absolute;
+    top: $sp--3;
+    left: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: var(--c-brand);
+    border-radius: 50%;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
+    transform: translateX(-50%);
+  }
+
+  &__type {
+    align-self: flex-start;
+  }
+  &__title {
+    font-size: $fsz--lg;
+  }
+  &__desc {
+    color: var(--c-muted);
+  }
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $sp--3;
+    margin-top: auto;
+    padding-top: $sp--3;
+    border-top: 2px dashed var(--c-border);
+  }
+  &__size {
+    font-size: $fsz--sm;
+    color: var(--c-muted);
+  }
+}
+
+/* 4. FAQs: Chat Conversation */
+.faq {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: $sp--5;
+  align-items: start;
+  @include respond(tablet_land) {
+    grid-template-columns: 1fr;
+  }
+
+  &__chips {
+    display: flex;
+    flex-direction: column;
+    gap: $sp--2;
+  }
+  &__label {
+    margin-bottom: $sp--2;
+    font-weight: $fw--bold;
+  }
+}
+
+.chip {
+  padding: $sp--3 $sp--4;
+  text-align: left;
+  background: transparent;
+  border: 2px solid var(--c-border);
+  border-radius: $br--default;
+  transition:
+    border-color $tr--fast,
+    background $tr--fast,
+    transform $tr--fast;
+  &:hover:not(:disabled) {
+    border-color: var(--c-accent);
+    transform: translateX(0.6rem);
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 58rem;
+  overflow: hidden;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: $br--lg;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: $sp--3;
+    padding: $sp--3 $sp--4;
+    background: var(--c-surface-2);
+    border-bottom: 1px solid var(--c-border);
+  }
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: $fsz--lg;
+    color: var(--c-on-accent);
+    background: var(--c-accent);
+    border-radius: 50%;
+  }
+  &__who {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    small {
+      color: var(--c-muted);
+    }
+  }
+  &__reset {
+    margin-left: auto;
+  }
+
+  &__log {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: $sp--3;
+    padding: $sp--4;
+    overflow-y: auto;
+  }
+}
+
+.bubble {
+  max-width: 82%;
+  padding: $sp--3 $sp--4;
+  border-radius: 2rem;
+  animation: bubble-in 0.35s $tr--smooth;
+  &--bot {
+    align-self: flex-start;
+    background: var(--c-surface-2);
+    border-bottom-left-radius: 0.4rem;
+  }
+  &--user {
+    align-self: flex-end;
+    font-weight: $fw--medium;
+    color: var(--c-on-accent);
+    background: var(--c-accent);
+    border-bottom-right-radius: 0.4rem;
+  }
+}
+@keyframes bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.2rem) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

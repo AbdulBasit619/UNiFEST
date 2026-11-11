@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as *;
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp--3;
+  margin-bottom: $sp--6;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $sp--2;
+    padding: $sp--3 $sp--5;
+    font-weight: $fw--bold;
+    background: transparent;
+    border: 2px solid var(--c-border);
+    border-radius: $br--pill;
+    transition:
+      transform $tr--fast,
+      background $tr--fast,
+      border-color $tr--fast,
+      box-shadow $tr--fast;
+
+    &:hover {
+      border-color: var(--c-text);
+    }
+    &[aria-selected='true'] {
+      background: var(--c-accent);
+      color: var(--c-on-accent);
+      border-color: transparent;
+      box-shadow: var(--shadow-hard);
+      transform: translate(-0.2rem, -0.2rem);
+    }
+  }
+}
