@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News | UNiFEST</title>
+    <meta
+      name="description"
+      content="Department news, event photos and sponsors from UNiFEST."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/css/main.css" />
+    <link rel="stylesheet" href="../styles/css/news.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container header__inner">
+        <a
+          class="header__logo"
+          href="../../index.html"
+          aria-label="UNiFEST home"
+        >
+          <span class="header__logo-mark">U</span>UNiFEST
+        </a>
+        <button
+          class="header__burger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <nav class="nav" id="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="../../index.html">Home</a></li>
+            <li>
+              <a
+                class="nav__link nav__link--active"
+                href="news.html"
+                aria-current="page"
+                >News</a
+              >
+            </li>
+            <li><a class="nav__link" href="upevents.html">Events</a></li>
+            <li><a class="nav__link" href="societies.html">Societies</a></li>
+            <li><a class="nav__link" href="resources.html">Resources</a></li>
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--accent btn--sm header__cta" href="#">Sign in</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== DEPARTMENT NEWS ===== -->
+      <section class="section" aria-labelledby="news-title">
+        <div class="container">
+          <div class="section__head">
+            <h1 class="heading_primary" id="news-title">
+              What's happening in your school
+            </h1>
+            <p class="text--lead text--muted">
+              Choose your school to read its latest news and announcements.
+            </p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Choose a school">
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-computing"
+              aria-selected="false"
+              aria-controls="acc-computing"
+            >
+              <ion-icon name="code-slash-outline"></ion-icon>Computing
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-engineering"
+              aria-selected="false"
+              aria-controls="acc-engineering"
+            >
+              <ion-icon name="construct-outline"></ion-icon>Engineering
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-management"
+              aria-selected="false"
+              aria-controls="acc-management"
+            >
+              <ion-icon name="briefcase-outline"></ion-icon>Management
+            </button>
+          </div>
+          <p class="news__hint">
+            Pick a school above and its news shows up here.
+          </p>
+          <div
+            class="accordion"
+            id="acc-computing"
+            role="tabpanel"
+            aria-label="Computing news"
+            hidden
+          >
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-computing-1"
+                  aria-expanded="false"
+                  aria-controls="p-computing-1"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 5</span
+                    ><span class="accordion__title"
+                      >Code Rush Hackathon opens registration</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-computing-1"
+                role="region"
+                aria-labelledby="t-computing-1"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-computing1/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        A 24-hour build-a-thon with cash prizes and mentors from
+                        local startups. Teams of up to four can register until
+                        Nov 25.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Computing events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-computing-2"
+                  aria-expanded="false"
+                  aria-controls="p-computing-2"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 8</span
+                    ><span class="accordion__title"
+                      >AI Lab opens late-night access</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-computing-2"
+                role="region"
+                aria-labelledby="t-computing-2"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-computing2/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        Students on Tech Fest teams can book the AI Lab until
+                        midnight through December. Bring your student card.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Computing events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-computing-3"
+                  aria-expanded="false"
+                  aria-controls="p-computing-3"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 12</span
+                    ><span class="accordion__title"
+                      >Guest talk: shipping software at scale</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-computing-3"
+                role="region"
+                aria-labelledby="t-computing-3"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-computing3/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        An engineer from a leading telecom speaks in the
+                        Auditorium on Nov 18. Open to all schools, seats are
+                        limited.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Computing events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            class="accordion"
+            id="acc-engineering"
+            role="tabpanel"
+            aria-label="Engineering news"
+            hidden
+          >
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-engineering-1"
+                  aria-expanded="false"
+                  aria-controls="p-engineering-1"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 4</span
+                    ><span class="accordion__title"
+                      >Robo Wars arena build begins</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-engineering-1"
+                role="region"
+                aria-labelledby="t-engineering-1"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-engineering1/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        The workshop is open daily for teams building their
+                        bots. Safety briefing is mandatory before first use.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Engineering events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-engineering-2"
+                  aria-expanded="false"
+                  aria-controls="p-engineering-2"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 9</span
+                    ><span class="accordion__title"
+                      >Circuit Design Challenge rules released</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-engineering-2"
+                role="region"
+                aria-labelledby="t-engineering-2"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-engineering2/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        Teams get a fixed parts kit and four hours. Judging
+                        covers efficiency, creativity and presentation.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Engineering events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-engineering-3"
+                  aria-expanded="false"
+                  aria-controls="p-engineering-3"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 13</span
+                    ><span class="accordion__title"
+                      >Alumni panel on hardware careers</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-engineering-3"
+                role="region"
+                aria-labelledby="t-engineering-3"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-engineering3/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        Four alumni share how they moved from final-year
+                        projects to product teams. Q&A follows the panel.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Engineering events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            class="accordion"
+            id="acc-management"
+            role="tabpanel"
+            aria-label="Management news"
+            hidden
+          >
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-management-1"
+                  aria-expanded="false"
+                  aria-controls="p-management-1"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 6</span
+                    ><span class="accordion__title"
+                      >Startup Pitch Night: applications open</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-management-1"
+                role="region"
+                aria-labelledby="t-management-1"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-management1/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        Pitch a business idea in five minutes to a panel of
+                        founders and investors. Submit your deck by Nov 30.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Management events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-management-2"
+                  aria-expanded="false"
+                  aria-controls="p-management-2"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 10</span
+                    ><span class="accordion__title"
+                      >Career Fair adds 12 new companies</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-management-2"
+                role="region"
+                aria-labelledby="t-management-2"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-management2/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        Banking, telecom and consulting firms join the line-up.
+                        Bring printed CVs and book interview slots.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Management events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <h3>
+                <button
+                  class="accordion__trigger"
+                  id="t-management-3"
+                  aria-expanded="false"
+                  aria-controls="p-management-3"
+                >
+                  <span class="accordion__head"
+                    ><span class="tag tag--accent">Nov 14</span
+                    ><span class="accordion__title"
+                      >Case competition teams announced</span
+                    ></span
+                  >
+                  <ion-icon
+                    class="accordion__icon"
+                    name="add-outline"
+                  ></ion-icon>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="p-management-3"
+                role="region"
+                aria-labelledby="t-management-3"
+              >
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <img
+                      class="accordion__img"
+                      src="https://picsum.photos/seed/unifest-management3/600/400"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div class="accordion__text">
+                      <p>
+                        Twenty teams advance to the live round. Briefs will be
+                        shared 48 hours before the event.
+                      </p>
+                      <p class="text--muted">
+                        Posted by the Management events team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EVENT GALLERY ===== -->
+      <section class="section" aria-label="Event photos">
+        <div class="gallery">
+          <div class="gallery__row">
+            <ul class="gallery__track">
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g1/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g2/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g3/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g4/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g5/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g6/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="gallery__row gallery__row--reverse">
+            <ul class="gallery__track">
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g11/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g12/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g13/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g14/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g15/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+              <li class="gallery__item">
+                <img
+                  class="gallery__img"
+                  src="https://picsum.photos/seed/unifest-g16/760/506"
+                  alt="Students at a past UNiFEST event"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SPONSORS ===== -->
+      <section
+        class="section section--sponsors"
+        aria-labelledby="sponsors-title"
+      >
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="heading_secondary" id="sponsors-title">
+              Backed by people who love a good crowd
+            </h2>
+            <p class="text--lead text--muted">
+              The partners who make UNiFEST events bigger every term.
+            </p>
+          </div>
+          <ul class="sponsors">
+            <li class="sponsors__item sponsors__lead">
+              <span class="sponsors__logo">Nexora</span
+              ><span class="text--muted">Title sponsor</span>
+            </li>
+            <li class="sponsors__item">
+              <span class="sponsors__logo">Lumen Bank</span
+              ><span class="text--muted">Gold partner</span>
+            </li>
+            <li class="sponsors__item">
+              <span class="sponsors__logo">Orbit Telecom</span
+              ><span class="text--muted">Gold partner</span>
+            </li>
+            <li class="sponsors__item">
+              <span class="sponsors__logo">Pixelforge</span
+              ><span class="text--muted">Tech partner</span>
+            </li>
+            <li class="sponsors__item">
+              <span class="sponsors__logo">Greenleaf</span
+              ><span class="text--muted">Food partner</span>
+            </li>
+            <li class="sponsors__item">
+              <span class="sponsors__logo">Stackly</span
+              ><span class="text--muted">Tech partner</span>
+            </li>
+            <li class="sponsors__item">
+              <span class="sponsors__logo">Kite Air</span
+              ><span class="text--muted">Travel partner</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a class="header__logo" href="../../index.html"
+              ><span class="header__logo-mark">U</span>UNiFEST</a
+            >
+            <p class="text--muted" style="margin-top: 1.6rem; max-width: 36rem">
+              Every event at FAST, in one place.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <nav aria-label="Explore">
+            <h4 class="footer__title">Explore</h4>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="news.html">News</a></li>
+              <li><a class="footer__link" href="upevents.html">Events</a></li>
+              <li>
+                <a class="footer__link" href="societies.html">Societies</a>
+              </li>
+              <li>
+                <a class="footer__link" href="resources.html">Resources</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h4 class="footer__title">Contact</h4>
+            <ul class="footer__list">
+              <li>events@unifest.edu.pk</li>
+              <li>+92 51 111 128 128</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title">Find us</h4>
+            <ul class="footer__list">
+              <li>FAST-NUCES, Islamabad</li>
+              <li>Events Office, Block B</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copy">
+          &copy; 2026 UNiFEST. Built for IICT Project, Fall 2026.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== THEME TOGGLER ===== -->
+    <button class="toggle" aria-label="Toggle light/dark theme">
+      <ion-icon
+        class="toggle__icon toggle__icon--moon"
+        name="moon-outline"
+      ></ion-icon>
+      <ion-icon
+        class="toggle__icon toggle__icon--sun"
+        name="sunny-outline"
+      ></ion-icon>
+    </button>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/news.js"></script>
+  </body>
+</html>

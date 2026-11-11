@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNiFEST | University Events</title>
+    <meta
+      name="description"
+      content="UNiFEST: discover, join and register for university events."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/styles/css/main.css" />
+    <link rel="stylesheet" href="src/styles/css/index.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__logo" href="index.html" aria-label="UNiFEST home">
+          <span class="header__logo-mark">U</span>UNiFEST
+        </a>
+        <button
+          class="header__burger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <nav class="nav" id="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li>
+              <a
+                class="nav__link nav__link--active"
+                href="index.html"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li><a class="nav__link" href="src/pages/news.html">News</a></li>
+            <li>
+              <a class="nav__link" href="src/pages/upevents.html">Events</a>
+            </li>
+            <li>
+              <a class="nav__link" href="src/pages/societies.html">Societies</a>
+            </li>
+            <li>
+              <a class="nav__link" href="src/pages/resources.html">Resources</a>
+            </li>
+            <li>
+              <a class="nav__link" href="src/pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="btn btn--accent btn--sm header__cta" href="#">Sign in</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== 1. HERO ===== -->
+      <section class="section--hero">
+        <div class="container hero">
+          <div class="hero__text">
+            <h1 class="heading_primary">Your campus, turned all the way up.</h1>
+            <p class="text--lead text--muted">
+              UNiFEST is the home of every hackathon, concert, match and career
+              fair at FAST. Find what's next, show up, and bring your team with
+              you.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--accent" href="#register">Register your team</a>
+              <a class="btn btn--ghost" href="src/pages/upevents.html"
+                >Browse events</a
+              >
+            </div>
+            <ul class="hero__stats">
+              <li class="hero__stat"><strong>40+</strong>events this term</li>
+              <li class="hero__stat"><strong>25</strong>societies</li>
+              <li class="hero__stat"><strong>5k</strong>students</li>
+            </ul>
+          </div>
+          <div class="hero__media">
+            <img
+              class="hero__img"
+              src="https://picsum.photos/seed/unifest-hero/1000/850"
+              alt="Students cheering at a campus event"
+            />
+            <p class="hero__chip"><span>Next up</span>UNiFEST 2027</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 2. EVENT HIGHLIGHT ===== -->
+      <section
+        class="section"
+        id="highlights"
+        aria-labelledby="highlight-title"
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2 class="heading_secondary" id="highlight-title">
+              The big stuff, first
+            </h2>
+            <p class="text--lead text--muted">
+              What's coming, what everyone's talking about, and what you might
+              have missed.
+            </p>
+          </div>
+
+          <div class="highlight">
+            <article class="feature">
+              <img
+                class="feature__img"
+                src="https://picsum.photos/seed/unifest-big/1400/1000"
+                alt="Crowd at the UNiFEST main stage"
+              />
+              <div class="feature__body">
+                <span class="tag tag--accent">Next major event</span>
+                <h3 class="heading_secondary">UNiFEST 2027 is coming</h3>
+                <p>
+                  One day, 30+ competitions and over Rs 1 million in prizes.
+                  Hackathons, robot battles, pitch night and a stage that
+                  doesn't go quiet.
+                </p>
+                <div class="feature__actions">
+                  <a class="btn btn--accent" href="#register">Register now</a>
+                  <a class="btn btn--ghost" href="src/pages/upevents.html"
+                    >See all events</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <div class="popular">
+              <h3 class="heading_tertiary popular__head">Popular events</h3>
+              <ol>
+                <li>
+                  <a class="popular__item" href="src/pages/upevents.html">
+                    <img
+                      class="popular__item-img"
+                      src="https://picsum.photos/seed/unifest-pop1/300/300"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <span class="popular__item-info"
+                      ><span class="tag">Computing</span
+                      ><strong>Code Rush Hackathon</strong
+                      ><span class="text--muted"
+                        >Nov 28 · Lab 3 · 312 interested</span
+                      ></span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a class="popular__item" href="src/pages/upevents.html">
+                    <img
+                      class="popular__item-img"
+                      src="https://picsum.photos/seed/unifest-pop2/300/300"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <span class="popular__item-info"
+                      ><span class="tag">Sports</span
+                      ><strong>Inter-Dept Cricket Cup</strong
+                      ><span class="text--muted"
+                        >Dec 3 · Main Ground · 276 interested</span
+                      ></span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a class="popular__item" href="src/pages/upevents.html">
+                    <img
+                      class="popular__item-img"
+                      src="https://picsum.photos/seed/unifest-pop3/300/300"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <span class="popular__item-info"
+                      ><span class="tag">Engineering</span
+                      ><strong>Robo Wars</strong
+                      ><span class="text--muted"
+                        >Dec 5 · Workshop Arena · 241 interested</span
+                      ></span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a class="popular__item" href="src/pages/upevents.html">
+                    <img
+                      class="popular__item-img"
+                      src="https://picsum.photos/seed/unifest-pop4/300/300"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <span class="popular__item-info"
+                      ><span class="tag">Social</span
+                      ><strong>Open Mic Night</strong
+                      ><span class="text--muted"
+                        >Dec 6 · Auditorium · 198 interested</span
+                      ></span
+                    >
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="announce">
+            <h3 class="heading_tertiary announce__title">
+              Recent announcements
+            </h3>
+            <button class="announce__card" data-modal-open="ann-1">
+              <span class="tag tag--accent">Registration</span>
+              <h4 class="heading_tertiary">
+                UNiFEST 2027 registrations are open
+              </h4>
+              <p class="text--muted">
+                Teams can now sign up for every competition.
+              </p>
+              <span class="announce__more"
+                >Read more <ion-icon name="arrow-forward-outline"></ion-icon
+              ></span>
+            </button>
+            <button class="announce__card" data-modal-open="ann-2">
+              <span class="tag tag--brand">Schedule</span>
+              <h4 class="heading_tertiary">Cricket Cup fixtures released</h4>
+              <p class="text--muted">
+                Eight departments, one trophy. Check your match day.
+              </p>
+              <span class="announce__more"
+                >Read more <ion-icon name="arrow-forward-outline"></ion-icon
+              ></span>
+            </button>
+            <button class="announce__card" data-modal-open="ann-3">
+              <span class="tag">Sponsors</span>
+              <h4 class="heading_tertiary">
+                Career Fair adds 12 new companies
+              </h4>
+              <p class="text--muted">
+                More recruiters are joining. Bring your CV.
+              </p>
+              <span class="announce__more"
+                >Read more <ion-icon name="arrow-forward-outline"></ion-icon
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. COUNTDOWN ===== -->
+      <section
+        class="section--countdown"
+        id="countdown"
+        aria-labelledby="countdown-title"
+      >
+        <div class="cd__bg" aria-hidden="true"></div>
+        <span class="cd__ghost" aria-hidden="true">2027</span>
+        <div class="container cd__inner">
+          <h2 class="heading_primary" id="countdown-title" data-reveal>
+            UNiFEST 2027 starts in
+          </h2>
+          <div
+            class="countdown"
+            data-target="2027-04-10T09:00:00"
+            role="timer"
+            aria-label="Time until UNiFEST 2027"
+          >
+            <div class="countdown__unit" data-reveal>
+              <span class="countdown__num" data-unit="days">00</span>days
+            </div>
+            <div class="countdown__unit" data-reveal>
+              <span class="countdown__num" data-unit="hours">00</span>hours
+            </div>
+            <div class="countdown__unit" data-reveal>
+              <span class="countdown__num" data-unit="mins">00</span>minutes
+            </div>
+            <div class="countdown__unit" data-reveal>
+              <span class="countdown__num" data-unit="secs">00</span>seconds
+            </div>
+          </div>
+          <p class="cd__date" data-reveal>
+            10 April 2027 · FAST-NUCES, Islamabad
+          </p>
+          <a class="btn btn--accent" href="#register" data-reveal
+            >Save your spot</a
+          >
+        </div>
+      </section>
+
+      <!-- ===== 4. WINNERS ===== -->
+      <section class="section" id="winners" aria-labelledby="winners-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="heading_secondary" id="winners-title">
+              UNiFEST 2026 winners
+            </h2>
+            <p class="text--lead text--muted">
+              Two podium finishers from every event. Your name could be on this
+              wall next year.
+            </p>
+          </div>
+          <div
+            class="winners"
+            data-carousel
+            aria-roledescription="carousel"
+            aria-label="UNiFEST 2026 winners"
+          >
+            <ul class="winners__track">
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="1 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true"
+                  >Code Rush Hackathon</span
+                >
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-1.png"
+                  alt="Daniyal  Shah, 1st position in Code Rush Hackathon"
+                />
+                <span class="winner__tag winner__tag--position"
+                  >1st Position</span
+                >
+                <span class="winner__tag winner__tag--event"
+                  >Code Rush Hackathon</span
+                >
+                <span class="winner__tag winner__tag--prize">Rs 100,000</span>
+                <p class="winner__caption">
+                  <strong>Daniyal Shah</strong>BS Computer Science · Batch 2023
+                </p>
+              </li>
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="2 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true"
+                  >Code Rush Hackathon</span
+                >
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-2.png"
+                  alt="Ayesha Bakhtawar, runner-up in Code Rush Hackathon"
+                />
+                <span class="winner__tag winner__tag--position">Runner-up</span>
+                <span class="winner__tag winner__tag--event"
+                  >Code Rush Hackathon</span
+                >
+                <span class="winner__tag winner__tag--prize">Rs 50,000</span>
+                <p class="winner__caption">
+                  <strong>Ayesha Bakhtawar</strong>BS Software Engineering ·
+                  Batch 2024
+                </p>
+              </li>
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="3 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true">Robo Wars</span>
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-3.png"
+                  alt="Rayyan Baig, 1st position in Robo Wars"
+                />
+                <span class="winner__tag winner__tag--position"
+                  >1st Position</span
+                >
+                <span class="winner__tag winner__tag--event">Robo Wars</span>
+                <span class="winner__tag winner__tag--prize">Rs 150,000</span>
+                <p class="winner__caption">
+                  <strong>Rayyan Baig</strong>BS Electrical Engineering · Batch
+                  2022
+                </p>
+              </li>
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="4 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true">Robo Wars</span>
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-4.png"
+                  alt="Mannan Haider, runner-up in Robo Wars"
+                />
+                <span class="winner__tag winner__tag--position">Runner-up</span>
+                <span class="winner__tag winner__tag--event">Robo Wars</span>
+                <span class="winner__tag winner__tag--prize">Rs 75,000</span>
+                <p class="winner__caption">
+                  <strong>Mannan Haider</strong>BS Mechatronics · Batch 2023
+                </p>
+              </li>
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="5 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true"
+                  >Startup Pitch Night</span
+                >
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-5.png"
+                  alt="Sana Safinaz, 1st position in Startup Pitch Night"
+                />
+                <span class="winner__tag winner__tag--position"
+                  >1st Position</span
+                >
+                <span class="winner__tag winner__tag--event"
+                  >Startup Pitch Night</span
+                >
+                <span class="winner__tag winner__tag--prize">Rs 200,000</span>
+                <p class="winner__caption">
+                  <strong>Sana Safinaz</strong>BBA · Batch 2023
+                </p>
+              </li>
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="6 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true"
+                  >Startup Pitch Night</span
+                >
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-6.png"
+                  alt="Prakash Raj, runner-up in Startup Pitch Night"
+                />
+                <span class="winner__tag winner__tag--position">Runner-up</span>
+                <span class="winner__tag winner__tag--event"
+                  >Startup Pitch Night</span
+                >
+                <span class="winner__tag winner__tag--prize">Rs 100,000</span>
+                <p class="winner__caption">
+                  <strong>Prakash Raj</strong>BS Business Analytics · Batch 2024
+                </p>
+              </li>
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="7 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true"
+                  >Cyber Defense CTF</span
+                >
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-7.png"
+                  alt="Noor Fatima, 1st position in Cyber Defense CTF"
+                />
+                <span class="winner__tag winner__tag--position"
+                  >1st Position</span
+                >
+                <span class="winner__tag winner__tag--event"
+                  >Cyber Defense CTF</span
+                >
+                <span class="winner__tag winner__tag--prize">Rs 80,000</span>
+                <p class="winner__caption">
+                  <strong>Noor Fatima</strong>BS Cyber Security · Batch 2023
+                </p>
+              </li>
+              <li
+                class="winner"
+                aria-roledescription="slide"
+                aria-label="8 of 8"
+              >
+                <span class="winner__bg" aria-hidden="true"
+                  >Cyber Defense CTF</span
+                >
+                <img
+                  class="winner__img"
+                  src="src/images/winners/winner-8.png"
+                  alt="Maria Fatima, runner-up in Cyber Defense CTF"
+                />
+                <span class="winner__tag winner__tag--position">Runner-up</span>
+                <span class="winner__tag winner__tag--event"
+                  >Cyber Defense CTF</span
+                >
+                <span class="winner__tag winner__tag--prize">Rs 40,000</span>
+                <p class="winner__caption">
+                  <strong>Maria Fatima</strong>BS Computer Science · Batch 2022
+                </p>
+              </li>
+            </ul>
+            <div class="winners__nav">
+              <span class="winners__count" aria-hidden="true">01 / 08</span>
+              <button
+                class="winners__btn"
+                data-dir="prev"
+                aria-label="Previous winner"
+              >
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </button>
+              <button
+                class="winners__btn"
+                data-dir="next"
+                aria-label="Next winner"
+              >
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 5. REGISTRATION CTA ===== -->
+      <section
+        class="section section--cta"
+        id="register"
+        aria-labelledby="register-title"
+      >
+        <div class="container cta">
+          <h2 class="heading_secondary" id="register-title">
+            Register your team for UNiFEST 2027
+          </h2>
+          <p class="text--lead text--muted">
+            Pick an event, add your teammates and upload your payment proof.
+            Done in two minutes.
+          </p>
+          <form class="form" id="register-form" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="reg-event">Event</label>
+              <select
+                class="form__input"
+                id="reg-event"
+                name="event"
+                required
+                aria-describedby="reg-event-err"
+              >
+                <option value="">Select an event…</option>
+                <option
+                  value="Code Rush Hackathon"
+                  data-max="4"
+                  data-fee="Rs 2,000"
+                >
+                  Code Rush Hackathon (up to 4)
+                </option>
+                <option value="Robo Wars" data-max="4" data-fee="Rs 3,000">
+                  Robo Wars (up to 4)
+                </option>
+                <option
+                  value="Cyber Defense CTF"
+                  data-max="3"
+                  data-fee="Rs 1,500"
+                >
+                  Cyber Defense CTF (up to 3)
+                </option>
+                <option
+                  value="Startup Pitch Night"
+                  data-max="5"
+                  data-fee="Rs 2,500"
+                >
+                  Startup Pitch Night (up to 5)
+                </option>
+                <option
+                  value="Case Competition"
+                  data-max="4"
+                  data-fee="Rs 2,000"
+                >
+                  Case Competition (up to 4)
+                </option>
+                <option
+                  value="Futsal Showdown"
+                  data-max="7"
+                  data-fee="Rs 3,500"
+                >
+                  Futsal Showdown (up to 7)
+                </option>
+                <option
+                  value="Debate Championship"
+                  data-max="2"
+                  data-fee="Rs 1,000"
+                >
+                  Debate Championship (up to 2)
+                </option>
+                <option value="Open Mic Night" data-max="1" data-fee="Rs 500">
+                  Open Mic Night (up to 1)
+                </option>
+              </select>
+              <p class="form__error" id="reg-event-err"></p>
+            </div>
+            <p class="reg__info" hidden></p>
+            <div class="form__field">
+              <label class="form__label" for="reg-size">Team size</label>
+              <select
+                class="form__input"
+                id="reg-size"
+                name="size"
+                required
+                disabled
+                aria-describedby="reg-size-err"
+              >
+                <option value="">Choose an event first</option>
+              </select>
+              <p class="form__error" id="reg-size-err"></p>
+            </div>
+            <div class="participants" aria-live="polite"></div>
+            <div class="form__field">
+              <label class="form__label" for="reg-uni">University</label>
+              <input
+                class="form__input"
+                id="reg-uni"
+                name="university"
+                type="text"
+                required
+                aria-describedby="reg-uni-err"
+              />
+              <p class="form__error" id="reg-uni-err"></p>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="reg-proof"
+                >Proof of payment (screenshot, max 5 MB)</label
+              >
+              <input
+                class="form__input"
+                id="reg-proof"
+                name="proof"
+                type="file"
+                accept="image/png,image/jpeg"
+                required
+                aria-describedby="reg-proof-err"
+              />
+              <p class="form__error" id="reg-proof-err"></p>
+            </div>
+            <button class="btn btn--accent btn--block" type="submit">
+              Register my team
+            </button>
+            <p class="form__success" role="status" tabindex="-1" hidden>
+              You're registered! We'll confirm by email once your payment is
+              verified.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== ANNOUNCEMENT MODALS ===== -->
+    <dialog class="modal" id="ann-1" aria-labelledby="ann-1-t">
+      <button class="modal__close" data-modal-close aria-label="Close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <img
+        class="modal__img"
+        src="https://picsum.photos/seed/unifest-ann-1/1200/600"
+        alt=""
+      />
+      <div class="modal__body">
+        <div class="modal__meta">
+          <span class="tag tag--accent">Registration</span
+          ><span class="tag">Posted Nov 5</span>
+        </div>
+        <h3 class="heading_secondary" id="ann-1-t">
+          UNiFEST 2027 registrations are open
+        </h3>
+        <p>
+          Teams of up to seven can register until March 15. Each event has its
+          own team limit and fee, shown in the registration form below. Payment
+          is by bank transfer and you upload a screenshot as proof.
+          Registrations without proof are not confirmed.
+        </p>
+        <p class="text--muted">
+          Questions? Visit the Events Office, Block B, Room 12.
+        </p>
+      </div>
+    </dialog>
+    <dialog class="modal" id="ann-2" aria-labelledby="ann-2-t">
+      <button class="modal__close" data-modal-close aria-label="Close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <img
+        class="modal__img"
+        src="https://picsum.photos/seed/unifest-ann-2/1200/600"
+        alt=""
+      />
+      <div class="modal__body">
+        <div class="modal__meta">
+          <span class="tag tag--brand">Schedule</span
+          ><span class="tag">Posted Nov 7</span>
+        </div>
+        <h3 class="heading_secondary" id="ann-2-t">
+          Cricket Cup fixtures released
+        </h3>
+        <p>
+          Eight departments are drawn into two groups. Group matches start
+          December 3 at the Main Ground, with the final on December 10. Captains
+          must confirm squads 48 hours before their first match.
+        </p>
+        <p class="text--muted">
+          Questions? Visit the Events Office, Block B, Room 12.
+        </p>
+      </div>
+    </dialog>
+    <dialog class="modal" id="ann-3" aria-labelledby="ann-3-t">
+      <button class="modal__close" data-modal-close aria-label="Close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <img
+        class="modal__img"
+        src="https://picsum.photos/seed/unifest-ann-3/1200/600"
+        alt=""
+      />
+      <div class="modal__body">
+        <div class="modal__meta">
+          <span class="tag">Sponsors</span><span class="tag">Posted Nov 8</span>
+        </div>
+        <h3 class="heading_secondary" id="ann-3-t">
+          Career Fair adds 12 new companies
+        </h3>
+        <p>
+          Twelve more employers across software, banking and telecom will join
+          the Career Fair on December 8. Carry printed CVs and register for
+          interview slots at the Career Services desk.
+        </p>
+        <p class="text--muted">
+          Questions? Visit the Events Office, Block B, Room 12.
+        </p>
+      </div>
+    </dialog>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a class="header__logo" href="index.html"
+              ><span class="header__logo-mark">U</span>UNiFEST</a
+            >
+            <p class="text--muted" style="margin-top: 1.6rem; max-width: 36rem">
+              Every event at FAST, in one place.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <nav aria-label="Explore">
+            <h4 class="footer__title">Explore</h4>
+            <ul class="footer__list">
+              <li>
+                <a class="footer__link" href="src/pages/news.html">News</a>
+              </li>
+              <li>
+                <a class="footer__link" href="src/pages/upevents.html"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a class="footer__link" href="src/pages/societies.html"
+                  >Societies</a
+                >
+              </li>
+              <li>
+                <a class="footer__link" href="src/pages/resources.html"
+                  >Resources</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h4 class="footer__title">Contact</h4>
+            <ul class="footer__list">
+              <li>events@unifest.edu.pk</li>
+              <li>+92 51 111 128 128</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title">Find us</h4>
+            <ul class="footer__list">
+              <li>FAST-NUCES, Islamabad</li>
+              <li>Events Office, Block B</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copy">
+          &copy; 2026 UNiFEST. Built for IICT Project, Fall 2026.
+        </p>
+      </div>
+    </footer>
+
+    <!-- THEME TOGGLER -->
+    <button class="toggle" aria-label="Toggle light/dark theme">
+      <ion-icon
+        class="toggle__icon toggle__icon--moon"
+        name="moon-outline"
+      ></ion-icon>
+      <ion-icon
+        class="toggle__icon toggle__icon--sun"
+        name="sunny-outline"
+      ></ion-icon>
+    </button>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/index.js"></script>
+  </body>
+</html>

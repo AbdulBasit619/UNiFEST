@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upcoming Events | UNiFEST</title>
+    <meta
+      name="description"
+      content="Browse upcoming UNiFEST events by school, social and sports."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/css/main.css" />
+    <link rel="stylesheet" href="../styles/css/upevents.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container header__inner">
+        <a
+          class="header__logo"
+          href="../../index.html"
+          aria-label="UNiFEST home"
+        >
+          <span class="header__logo-mark">U</span>UNiFEST
+        </a>
+        <button
+          class="header__burger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <nav class="nav" id="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="../../index.html">Home</a></li>
+            <li><a class="nav__link" href="news.html">News</a></li>
+            <li>
+              <a
+                class="nav__link nav__link--active"
+                href="upevents.html"
+                aria-current="page"
+                >Events</a
+              >
+            </li>
+            <li><a class="nav__link" href="societies.html">Societies</a></li>
+            <li><a class="nav__link" href="resources.html">Resources</a></li>
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--accent btn--sm header__cta" href="#">Sign in</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== UPCOMING EVENTS ===== -->
+      <section class="section" aria-labelledby="events-title">
+        <div class="container">
+          <div class="section__head">
+            <h1 class="heading_primary" id="events-title">
+              Find your next event
+            </h1>
+            <p class="text--lead text--muted">
+              Choose your school, or jump straight to Social or Sports. Click
+              any event for the full details.
+            </p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Choose a category">
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-computing"
+              aria-selected="false"
+              aria-controls="events-computing"
+            >
+              <ion-icon name="code-slash-outline"></ion-icon>Computing
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-engineering"
+              aria-selected="false"
+              aria-controls="events-engineering"
+            >
+              <ion-icon name="construct-outline"></ion-icon>Engineering
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-management"
+              aria-selected="false"
+              aria-controls="events-management"
+            >
+              <ion-icon name="briefcase-outline"></ion-icon>Management
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-social"
+              aria-selected="false"
+              aria-controls="events-social"
+            >
+              <ion-icon name="people-outline"></ion-icon>Social
+            </button>
+            <button
+              class="tabs__btn"
+              role="tab"
+              id="tab-sports"
+              aria-selected="false"
+              aria-controls="events-sports"
+            >
+              <ion-icon name="football-outline"></ion-icon>Sports
+            </button>
+          </div>
+          <p class="tabs__hint">
+            Pick a category above and its upcoming events show up here.
+          </p>
+          <ul
+            class="events"
+            id="events-computing"
+            role="tabpanel"
+            aria-label="Computing events"
+            data-category="computing"
+            data-label="Computing"
+            hidden
+          >
+            <li
+              class="event"
+              data-date="Saturday, 28 November 2026"
+              data-time="9:00 AM"
+              data-venue="Lab 3"
+              data-organizer="FAST Computing Society"
+              data-fee="Free"
+              data-desc="Build a working product in 24 hours with mentors from local startups. Teams of up to four compete for cash prizes and internship interviews."
+              data-img="https://picsum.photos/seed/unifest-ev-computing1/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-computing1/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Computing</span>
+                <span class="event__date">28 Nov · 9:00 AM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Code Rush Hackathon
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Lab 3</span
+                    >
+                    <p>24 hours, one big idea.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Wednesday, 2 December 2026"
+              data-time="2:00 PM"
+              data-venue="Seminar Hall A"
+              data-organizer="Data Science Society"
+              data-fee="Free"
+              data-desc="A guided workshop that takes you from raw data to a trained model. Bring a laptop; notebooks and datasets are provided."
+              data-img="https://picsum.photos/seed/unifest-ev-computing2/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-computing2/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Computing</span>
+                <span class="event__date">2 Dec · 2:00 PM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    AI Study Jam
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Seminar Hall
+                      A</span
+                    >
+                    <p>Hands-on machine learning for beginners.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Wednesday, 9 December 2026"
+              data-time="10:00 AM"
+              data-venue="Lab 5"
+              data-organizer="Cyber Club"
+              data-fee="Rs 500 per team"
+              data-desc="Solve security puzzles across web, crypto and forensics. Beginner and advanced brackets run in parallel."
+              data-img="https://picsum.photos/seed/unifest-ev-computing3/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-computing3/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Computing</span>
+                <span class="event__date">9 Dec · 10:00 AM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Cyber Defense CTF
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Lab 5</span
+                    >
+                    <p>Capture flags, break things safely.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            class="events"
+            id="events-engineering"
+            role="tabpanel"
+            aria-label="Engineering events"
+            data-category="engineering"
+            data-label="Engineering"
+            hidden
+          >
+            <li
+              class="event"
+              data-date="Saturday, 5 December 2026"
+              data-time="11:00 AM"
+              data-venue="Workshop Arena"
+              data-organizer="Robotics Society"
+              data-fee="Rs 1,000 per team"
+              data-desc="Weight-class combat for student-built robots. Safety inspection is mandatory before every match."
+              data-img="https://picsum.photos/seed/unifest-ev-engineering1/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-engineering1/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Engineering</span>
+                <span class="event__date">5 Dec · 11:00 AM</span>
+                <h3>
+                  <button class="event__open" type="button">Robo Wars</button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Workshop
+                      Arena</span
+                    >
+                    <p>Bots, brawls and bragging rights.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Tuesday, 24 November 2026"
+              data-time="10:00 AM"
+              data-venue="Electronics Lab"
+              data-organizer="IEEE Student Chapter"
+              data-fee="Free"
+              data-desc="Design and build a working circuit from a fixed parts kit. Judged on efficiency, creativity and presentation."
+              data-img="https://picsum.photos/seed/unifest-ev-engineering2/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-engineering2/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Engineering</span>
+                <span class="event__date">24 Nov · 10:00 AM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Circuit Design Challenge
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Electronics
+                      Lab</span
+                    >
+                    <p>Four hours, one parts kit.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Saturday, 12 December 2026"
+              data-time="1:00 PM"
+              data-venue="Main Parking Lot"
+              data-organizer="Mechanical Engineering Club"
+              data-fee="Free"
+              data-desc="See student-built solar vehicles run laps and meet the teams behind them. Vote for the crowd favorite."
+              data-img="https://picsum.photos/seed/unifest-ev-engineering3/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-engineering3/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Engineering</span>
+                <span class="event__date">12 Dec · 1:00 PM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Solar Car Showcase
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Main Parking
+                      Lot</span
+                    >
+                    <p>Student-built cars take to the track.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            class="events"
+            id="events-management"
+            role="tabpanel"
+            aria-label="Management events"
+            data-category="management"
+            data-label="Management"
+            hidden
+          >
+            <li
+              class="event"
+              data-date="Friday, 4 December 2026"
+              data-time="6:00 PM"
+              data-venue="Auditorium"
+              data-organizer="Entrepreneurship Society"
+              data-fee="Free"
+              data-desc="Pitch your idea to a panel of founders and investors. Finalists receive mentoring and seed-prize funding."
+              data-img="https://picsum.photos/seed/unifest-ev-management1/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-management1/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Management</span>
+                <span class="event__date">4 Dec · 6:00 PM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Startup Pitch Night
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon
+                      >Auditorium</span
+                    >
+                    <p>Five minutes to win the room.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Tuesday, 8 December 2026"
+              data-time="10:00 AM"
+              data-venue="Main Hall"
+              data-organizer="Career Services"
+              data-fee="Free"
+              data-desc="Banking, telecom, software and consulting employers recruit on campus. Bring printed CVs and book interview slots early."
+              data-img="https://picsum.photos/seed/unifest-ev-management2/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-management2/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Management</span>
+                <span class="event__date">8 Dec · 10:00 AM</span>
+                <h3>
+                  <button class="event__open" type="button">Career Fair</button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Main
+                      Hall</span
+                    >
+                    <p>Meet 40+ hiring companies.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Tuesday, 15 December 2026"
+              data-time="9:30 AM"
+              data-venue="Seminar Hall B"
+              data-organizer="Business Club"
+              data-fee="Free"
+              data-desc="Finalists present their solutions to industry judges. Case briefs are shared 48 hours before the round."
+              data-img="https://picsum.photos/seed/unifest-ev-management3/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-management3/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Management</span>
+                <span class="event__date">15 Dec · 9:30 AM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Case Competition Finals
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Seminar Hall
+                      B</span
+                    >
+                    <p>Twenty teams, one live brief.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            class="events"
+            id="events-social"
+            role="tabpanel"
+            aria-label="Social events"
+            data-category="social"
+            data-label="Social"
+            hidden
+          >
+            <li
+              class="event"
+              data-date="Sunday, 6 December 2026"
+              data-time="7:00 PM"
+              data-venue="Auditorium"
+              data-organizer="Literary Society"
+              data-fee="Free"
+              data-desc="Perform or just cheer. Sign-ups open at the door and every act gets five minutes on stage."
+              data-img="https://picsum.photos/seed/unifest-ev-social1/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-social1/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Social</span>
+                <span class="event__date">6 Dec · 7:00 PM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Open Mic Night
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon
+                      >Auditorium</span
+                    >
+                    <p>Poetry, comedy and music.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Saturday, 21 November 2026"
+              data-time="12:00 PM"
+              data-venue="Cafeteria Lawn"
+              data-organizer="Social Welfare Society"
+              data-fee="Pay what you like"
+              data-desc="All proceeds fund scholarships for first-year students. Bakers can register a stall in advance."
+              data-img="https://picsum.photos/seed/unifest-ev-social2/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-social2/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Social</span>
+                <span class="event__date">21 Nov · 12:00 PM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Charity Bake Sale
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Cafeteria
+                      Lawn</span
+                    >
+                    <p>Eat well, do good.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Friday, 18 December 2026"
+              data-time="6:30 PM"
+              data-venue="Main Ground Stage"
+              data-organizer="Cultural Society"
+              data-fee="Free"
+              data-desc="An evening of performances and food stalls celebrating campus diversity. Dress code: bright colors."
+              data-img="https://picsum.photos/seed/unifest-ev-social3/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-social3/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Social</span>
+                <span class="event__date">18 Dec · 6:30 PM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Cultural Night
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Main Ground
+                      Stage</span
+                    >
+                    <p>Music, dance and food from every province.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            class="events"
+            id="events-sports"
+            role="tabpanel"
+            aria-label="Sports events"
+            data-category="sports"
+            data-label="Sports"
+            hidden
+          >
+            <li
+              class="event"
+              data-date="Thursday, 3 December 2026"
+              data-time="9:00 AM"
+              data-venue="Main Ground"
+              data-organizer="Sports Society"
+              data-fee="Free to watch"
+              data-desc="Group matches run through the week with the final on December 10. Captains confirm squads 48 hours before the first match."
+              data-img="https://picsum.photos/seed/unifest-ev-sports1/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-sports1/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Sports</span>
+                <span class="event__date">3 Dec · 9:00 AM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Inter-Dept Cricket Cup
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Main
+                      Ground</span
+                    >
+                    <p>Eight departments, one trophy.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Thursday, 26 November 2026"
+              data-time="4:00 PM"
+              data-venue="Indoor Court"
+              data-organizer="Sports Society"
+              data-fee="Rs 2,000 per team"
+              data-desc="Knockout futsal for teams of five plus subs. Referees and balls are provided."
+              data-img="https://picsum.photos/seed/unifest-ev-sports2/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-sports2/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Sports</span>
+                <span class="event__date">26 Nov · 4:00 PM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Futsal Showdown
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Indoor
+                      Court</span
+                    >
+                    <p>Fast five-a-side action.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="event"
+              data-date="Sunday, 20 December 2026"
+              data-time="7:30 AM"
+              data-venue="Main Gate"
+              data-organizer="Fitness Club"
+              data-fee="Free"
+              data-desc="A 5 km fun run open to students and staff. Finishers get a medal and breakfast."
+              data-img="https://picsum.photos/seed/unifest-ev-sports3/1200/600"
+            >
+              <img
+                class="event__img"
+                src="https://picsum.photos/seed/unifest-ev-sports3/720/480"
+                alt=""
+                loading="lazy"
+              />
+              <div class="event__body">
+                <span class="tag tag--cat">Sports</span>
+                <span class="event__date">20 Dec · 7:30 AM</span>
+                <h3>
+                  <button class="event__open" type="button">
+                    Campus Marathon 5K
+                  </button>
+                </h3>
+                <div class="event__more">
+                  <div class="event__more-inner">
+                    <span class="event__venue"
+                      ><ion-icon name="location-outline"></ion-icon>Main
+                      Gate</span
+                    >
+                    <p>Run the whole campus.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== CTA ===== -->
+      <section class="section" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-banner">
+            <div class="cta-banner__text">
+              <h2 class="heading_secondary" id="cta-title">
+                Ready to compete?
+              </h2>
+              <p>
+                Pick your event, add your team and upload your payment proof. It
+                takes two minutes.
+              </p>
+            </div>
+            <a class="btn btn--accent" href="../../index.html#register"
+              >Register your team</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== EVENT DETAIL MODAL ===== -->
+    <dialog
+      class="modal modal--event"
+      id="event-modal"
+      aria-labelledby="modal-title"
+    >
+      <button class="modal__close" data-modal-close aria-label="Close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <img class="modal__img" data-field="img" src="#" alt="" />
+      <div class="modal__body">
+        <div class="modal__meta">
+          <span class="tag tag--cat" data-field="category"></span>
+          <span class="tag tag--accent" data-field="fee"></span>
+        </div>
+        <h2 class="heading_secondary" id="modal-title" data-field="title"></h2>
+        <p data-field="desc"></p>
+        <ul class="facts">
+          <li class="facts__item">
+            <ion-icon name="calendar-outline"></ion-icon
+            ><span
+              ><span class="facts__label">Date</span
+              ><strong data-field="date"></strong
+            ></span>
+          </li>
+          <li class="facts__item">
+            <ion-icon name="time-outline"></ion-icon
+            ><span
+              ><span class="facts__label">Time</span
+              ><strong data-field="time"></strong
+            ></span>
+          </li>
+          <li class="facts__item">
+            <ion-icon name="location-outline"></ion-icon
+            ><span
+              ><span class="facts__label">Venue</span
+              ><strong data-field="venue"></strong
+            ></span>
+          </li>
+          <li class="facts__item">
+            <ion-icon name="people-outline"></ion-icon
+            ><span
+              ><span class="facts__label">Organized by</span
+              ><strong data-field="organizer"></strong
+            ></span>
+          </li>
+        </ul>
+        <a class="btn btn--accent" href="../../index.html#register"
+          >Register for this event</a
+        >
+      </div>
+    </dialog>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a class="header__logo" href="../../index.html"
+              ><span class="header__logo-mark">U</span>UNiFEST</a
+            >
+            <p class="text--muted" style="margin-top: 1.6rem; max-width: 36rem">
+              Every event at FAST, in one place.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <nav aria-label="Explore">
+            <h4 class="footer__title">Explore</h4>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="news.html">News</a></li>
+              <li><a class="footer__link" href="upevents.html">Events</a></li>
+              <li>
+                <a class="footer__link" href="societies.html">Societies</a>
+              </li>
+              <li>
+                <a class="footer__link" href="resources.html">Resources</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h4 class="footer__title">Contact</h4>
+            <ul class="footer__list">
+              <li>events@unifest.edu.pk</li>
+              <li>+92 51 111 128 128</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title">Find us</h4>
+            <ul class="footer__list">
+              <li>FAST-NUCES, Islamabad</li>
+              <li>Events Office, Block B</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copy">
+          &copy; 2026 UNiFEST. Built for IICT Project, Fall 2026.
+        </p>
+      </div>
+    </footer>
+
+    <!-- THEME TOGGLER -->
+    <button class="toggle" aria-label="Toggle light/dark theme">
+      <ion-icon
+        class="toggle__icon toggle__icon--moon"
+        name="moon-outline"
+      ></ion-icon>
+      <ion-icon
+        class="toggle__icon toggle__icon--sun"
+        name="sunny-outline"
+      ></ion-icon>
+    </button>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/upevents.js"></script>
+  </body>
+</html>
