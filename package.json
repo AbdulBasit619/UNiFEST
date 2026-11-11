@@ -16,7 +16,7 @@
     "prefix:css": "postcss \"src/styles/css/*.css\" --use autoprefixer --no-map --replace",
     "compress:css": "postcss \"src/styles/css/*.css\" --use cssnano --no-map --replace",
     "build:css": "run-s compile:css prefix:css compress:css",
-    "build:site": "parcel build index.html \"src/pages/*.html\" --dist-dir dist --public-url ./",
+    "build:site": "parcel build index.html \"src/pages/*.html\" --dist-dir dist --public-url /",
     "build": "run-s build:css build:site"
   },
   "devDependencies": {
