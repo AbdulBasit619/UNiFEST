@@ -5,17 +5,35 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: color-mix(in srgb, var(--c-bg) 82%, transparent);
-  backdrop-filter: blur(1.6rem);
-  border-bottom: 1px solid var(--c-border);
+  pointer-events: none;
 
   &__inner {
+    pointer-events: auto;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: $sp--5;
-    height: 8.8rem;
+    width: 75%;
+    max-width: $mxw--desktop_large;
+    height: 7.2rem;
+    margin: $sp--3 auto 0;
+    padding: 0 $sp--3 0 $sp--5;
+    background: color-mix(in srgb, var(--c-surface) 82%, transparent);
+    backdrop-filter: blur(1.6rem);
+    border: 1px solid var(--c-border);
+    border-radius: $br--pill;
+    box-shadow: var(--shadow);
+
+    @include respond(tablet_land) {
+      width: 90%;
+    }
+    @include respond(phone) {
+      width: 94%;
+      height: 6.4rem;
+      gap: $sp--2;
+      padding-left: $sp--3;
+    }
   }
 
   // Swap the mark for your Adobe Express logo: <img class="header__logo-img">
@@ -46,22 +64,22 @@
   }
 
   &__burger {
-    display: none;
     @include flex-center;
+    display: none;
     width: 4.8rem;
     height: 4.8rem;
     font-size: $fsz--lg;
     background: none;
     border: 1px solid var(--c-border);
-    border-radius: $br--sm;
+    border-radius: 50%;
     @include respond(tablet) {
       display: flex;
     }
   }
 
   &__cta {
-    @include respond(phone) {
-      display: none;
+    @include respond(tablet) {
+      margin-left: auto;
     }
   }
 }
@@ -71,7 +89,7 @@
 
   &__list {
     display: flex;
-    gap: $sp--2;
+    gap: $sp--1;
   }
 
   &__link {
@@ -93,14 +111,16 @@
 
   @include respond(tablet) {
     position: absolute;
-    top: 100%;
-    left: -$sp--5;
-    right: -$sp--5;
+    top: calc(100% + #{$sp--2});
+    left: 0;
+    right: 0;
     margin: 0;
-    padding: $sp--3 $sp--5 $sp--5;
-    background: var(--c-bg);
-    border-bottom: 1px solid var(--c-border);
+    padding: $sp--3;
     display: none;
+    background: var(--c-bg);
+    border: 1px solid var(--c-border);
+    border-radius: $br--lg;
+    box-shadow: var(--shadow);
     &.is-open {
       display: block;
     }
