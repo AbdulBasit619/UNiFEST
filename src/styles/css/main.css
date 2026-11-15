@@ -11,7 +11,8 @@
   --c-on-accent: #0a0b1f;
   --c-highlight: #ffc933;
   --shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.5);
-  --shadow-hard: 0.6rem 0.6rem 0 var(--c-brand);
+  --shadow-hard: 0 -0.6rem 0 var(--c-brand);
+  --br-card: 5px dashed var(--c-brand);
 }
 
 :root[data-theme=light] {
@@ -309,13 +310,14 @@ h6,
   font-weight: 500;
   border-radius: 99rem;
   transition: background 0.2s ease;
+  border: 3px dotted color-mix(in srgb, var(--c-surface) 82%, transparent);
 }
 .nav__link:hover {
   background: var(--c-surface-2);
 }
 .nav__link--active, .nav__link--active:hover {
-  background: var(--c-accent);
-  color: var(--c-on-accent);
+  border: 3px dotted var(--c-accent);
+  color: var(--c-brand);
   font-weight: 700;
 }
 @media (max-width: 56.25em) {
@@ -344,6 +346,7 @@ h6,
   padding-block: 9.6rem 3.2rem;
   background: var(--c-surface);
   border-top: 1px solid var(--c-border);
+  border-radius: 7.2rem 7.2rem 0% 0%/7.2rem 7.2rem 0% 0%;
 }
 .footer__grid {
   display: grid;
@@ -411,11 +414,11 @@ h6,
   font-weight: 700;
   border: 2px solid transparent;
   border-radius: 99rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
 }
 .btn:hover {
-  transform: translate(-0.2rem, -0.2rem);
-  box-shadow: 0.4rem 0.4rem 0 var(--c-brand);
+  transform: scale(1.02);
+  box-shadow: 0 0 1rem var(--c-brand);
 }
 .btn:active {
   transform: none;
@@ -443,8 +446,8 @@ h6,
 .toggle {
   position: fixed;
   right: 2.4rem;
-  bottom: 2.4rem;
-  z-index: 200;
+  bottom: 6.4rem;
+  z-index: 99999999999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -609,7 +612,7 @@ h6,
   color: var(--c-on-accent);
   border-color: transparent;
   box-shadow: var(--shadow-hard);
-  transform: translate(-0.2rem, -0.2rem);
+  transform: translate(0, 0.3rem);
 }
 
 /*# sourceMappingURL=main.css.map */

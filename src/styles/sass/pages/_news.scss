@@ -9,7 +9,7 @@
   border-radius: $br--lg;
 }
 
-/* ---------- Accordion ---------- */
+/* Accordion */
 .accordion {
   display: flex;
   flex-direction: column;
@@ -69,7 +69,6 @@
     }
   }
 
-  // Height animation without JS measuring: grid rows 0fr -> 1fr
   &__panel {
     display: grid;
     grid-template-rows: 0fr;
@@ -121,7 +120,7 @@
   }
 }
 
-/* ---------- Event gallery: two-row infinite marquee ---------- */
+/* Event Gallery */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -143,7 +142,7 @@
   &__track {
     display: flex;
     gap: $sp--4;
-    padding-right: $sp--4; // keeps the -50% loop seamless
+    padding-right: $sp--4;
     width: max-content;
     animation: marquee 50s linear infinite;
     .gallery__row--reverse & {
@@ -197,7 +196,7 @@
   }
 }
 
-/* ---------- Sponsors (featured-in) ---------- */
+/* Sponsors */
 .section--sponsors {
   background: var(--c-surface);
   border-block: 1px solid var(--c-border);

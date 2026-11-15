@@ -6,7 +6,7 @@
   border-radius: 2.8rem;
 }
 
-/* ---------- Accordion ---------- */
+/* Accordion */
 .accordion {
   display: flex;
   flex-direction: column;
@@ -111,7 +111,7 @@
     transform: none;
   }
 }
-/* ---------- Event gallery: two-row infinite marquee ---------- */
+/* Event Gallery */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@
     animation: none;
   }
 }
-/* ---------- Sponsors (featured-in) ---------- */
+/* Sponsors */
 .section--sponsors {
   background: var(--c-surface);
   border-block: 1px solid var(--c-border);

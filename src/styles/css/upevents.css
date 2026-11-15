@@ -209,5 +209,8 @@
 .cta-banner .btn {
   flex-shrink: 0;
 }
+.cta-banner .btn:hover {
+  box-shadow: 0 0 1.6rem rgba(10, 11, 31, 0.4);
+}
 
 /*# sourceMappingURL=upevents.css.map */

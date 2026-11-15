@@ -61,7 +61,7 @@
   aspect-ratio: 4/3.4;
   object-fit: cover;
   border-radius: 2.8rem;
-  box-shadow: var(--shadow-hard);
+  border: var(--br-card);
   animation: hero-in 1s 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .hero__chip {
@@ -239,13 +239,13 @@
   padding: 3.2rem;
   text-align: left;
   background: var(--c-surface);
-  border: 1px solid var(--c-border);
+  border: 5px solid var(--c-border);
   border-radius: 2.8rem;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .announce__card:hover {
-  transform: translate(-0.4rem, -0.4rem);
-  box-shadow: var(--shadow-hard);
+  transform: translate(0, 0.8rem);
+  border: var(--br-card);
 }
 .announce__more {
   margin-top: auto;

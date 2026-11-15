@@ -2,7 +2,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-// Category colour-coding: tints/mixes of the 4 brand colours only
 $categories: (
   computing: $color--secondary,
   engineering: $color--accent,
@@ -218,5 +217,9 @@ $categories: (
   }
   .btn {
     flex-shrink: 0;
+
+    &:hover {
+      box-shadow: 0 0 1.6rem rgba(10, 11, 31, 0.4);
+    }
   }
 }
