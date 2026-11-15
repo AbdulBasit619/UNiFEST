@@ -256,7 +256,7 @@
   color: var(--c-highlight);
 }
 
-/* 3. FULL-PAGE COUNTDOWN with scroll-reveal */
+/* 3. FULL-PAGE COUNTDOWN */
 .section--countdown {
   position: relative;
   display: flex;
@@ -397,7 +397,7 @@
   --delay: 1.62s;
 }
 
-/* 4. WINNERS CAROUSEL (UNiFEST 2026) */
+/* 4. WINNERS CAROUSEL */
 .winners {
   position: relative;
   overflow: hidden;
@@ -576,10 +576,9 @@
   color: var(--c-text);
 }
 
-/* 5. REGISTRATION CTA (centered form) */
+/* 5. REGISTRATION CTA */
 .section--cta {
-  background: var(--c-surface);
-  border-block: 1px solid var(--c-border);
+  border-block-start: 1px solid var(--c-border);
 }
 
 .cta {
