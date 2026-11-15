@@ -27,6 +27,31 @@ if (burger && nav) {
   burger.addEventListener('click', () =>
     setNav(!nav.classList.contains('is-open')),
   );
+  nav.addEventListener('click', e => e.target.closest('a') && setNav(false));
+  document.addEventListener(
+    'keydown',
+    e => e.key === 'Escape' && setNav(false),
+  );
+  document.addEventListener(
+    'click',
+    e => !e.target.closest('.header__inner') && setNav(false),
+  );
+  window
+    .matchMedia('(min-width: 56.26em)')
+    .addEventListener('change', e => e.matches && setNav(false));
+}
+
+if (burger && nav) {
+  const icon = burger.querySelector('ion-icon');
+  const setNav = open => {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open);
+    icon.setAttribute('name', open ? 'close-outline' : 'menu-outline');
+  };
+
+  burger.addEventListener('click', () =>
+    setNav(!nav.classList.contains('is-open')),
+  );
   nav.addEventListener('click', e => e.target.closest('a') && setNav(false)); // close after picking a link
   document.addEventListener(
     'keydown',
@@ -51,5 +76,5 @@ document.addEventListener('click', e => {
   const closer = e.target.closest('[data-modal-close]');
   if (closer) return closer.closest('dialog').close();
 
-  if (e.target.matches('dialog.modal')) e.target.close(); // backdrop click
+  if (e.target.matches('dialog.modal')) e.target.close();
 });

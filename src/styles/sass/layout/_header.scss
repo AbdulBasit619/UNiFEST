@@ -4,7 +4,7 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999999999999999999999999;
   pointer-events: none;
 
   &__inner {
@@ -98,13 +98,14 @@
     font-weight: $fw--medium;
     border-radius: $br--pill;
     transition: background $tr--fast;
+    border: 3px dotted color-mix(in srgb, var(--c-surface) 82%, transparent);
     &:hover {
       background: var(--c-surface-2);
     }
     &--active,
     &--active:hover {
-      background: var(--c-accent);
-      color: var(--c-on-accent);
+      border: 3px dotted var(--c-accent);
+      color: var(--c-brand);
       font-weight: $fw--bold;
     }
   }

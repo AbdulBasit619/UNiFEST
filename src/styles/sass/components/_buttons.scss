@@ -9,13 +9,11 @@
   font-weight: $fw--bold;
   border: 2px solid transparent;
   border-radius: $br--pill;
-  transition:
-    transform $tr--fast,
-    box-shadow $tr--fast;
+  transition: all $tr--fast;
 
   &:hover {
-    transform: translate(-0.2rem, -0.2rem);
-    box-shadow: 0.4rem 0.4rem 0 var(--c-brand);
+    transform: scale(1.02);
+    box-shadow: 0 0 1rem var(--c-brand);
   }
   &:active {
     transform: none;
@@ -42,12 +40,11 @@
   }
 }
 
-// Floating theme toggle: fixed to the window, bottom-right
 .toggle {
   position: fixed;
   right: $sp--4;
-  bottom: $sp--4;
-  z-index: 200;
+  bottom: $sp--7;
+  z-index: 99999999999;
   display: flex;
   align-items: center;
   justify-content: center;

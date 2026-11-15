@@ -15,7 +15,8 @@
   --c-on-accent: #{$color--primary};
   --c-highlight: #{$color--accent};
   --shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.5);
-  --shadow-hard: 0.6rem 0.6rem 0 var(--c-brand);
+  --shadow-hard: 0 -0.6rem 0 var(--c-brand);
+  --br-card: 5px dashed var(--c-brand);
 }
 
 :root[data-theme='light'] {
