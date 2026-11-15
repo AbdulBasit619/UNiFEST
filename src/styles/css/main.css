@@ -10,8 +10,11 @@
   --c-accent: #ffc933;
   --c-on-accent: #0a0b1f;
   --c-highlight: #ffc933;
+  --c-hover: var(--c-accent);
+  --c-glow: 0 0 1.2rem color-mix(in srgb, var(--c-brand) 70%, transparent);
   --shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.5);
   --shadow-hard: 0 -0.6rem 0 var(--c-brand);
+  --shadow-hover: var(--shadow);
   --br-card: 5px dashed var(--c-brand);
 }
 
@@ -25,8 +28,13 @@
   --c-muted: rgb(34.9803921569%, 35.5882352941%, 45.1568627451%);
   --c-brand: rgb(88.4705882353%, 21.568627451%, 45.2862745098%);
   --c-highlight: rgb(88.4705882353%, 21.568627451%, 45.2862745098%);
-  --shadow: 0 2.4rem 6.4rem rgba(10, 11, 31, 0.12);
-  --shadow-hard: 0.6rem 0.6rem 0 var(--c-accent);
+  --c-hover: var(--c-brand);
+  --c-glow: 0 0.4rem 1.6rem rgba(10, 11, 31, 0.4);
+  --shadow: 0 1.6rem 4rem rgba(10, 11, 31, 0.14);
+  --shadow-hover: 0 2.4rem 5.6rem
+    color-mix(in srgb, var(--c-brand) 22%, transparent);
+  --shadow-hard: 0 -0.6rem 0 var(--c-brand);
+  --br-card: 5px dashed var(--c-brand);
 }
 
 *,
@@ -225,9 +233,9 @@ h6,
   gap: 3.2rem;
   width: 75%;
   max-width: 144rem;
-  height: 7.2rem;
+  height: 9.6rem;
   margin: 1.6rem auto 0;
-  padding: 0 1.6rem 0 3.2rem;
+  padding: 0 2.4rem 0 3.2rem;
   background: color-mix(in srgb, var(--c-surface) 82%, transparent);
   backdrop-filter: blur(1.6rem);
   border: 1px solid var(--c-border);
@@ -241,7 +249,7 @@ h6,
 }
 @media (max-width: 37.5em) {
   .header__inner .header__logo-img {
-    height: 4.8rem;
+    height: 5.6rem;
   }
   .header__inner {
     gap: 0.8rem;
@@ -254,7 +262,7 @@ h6,
 }
 .header__logo-img {
   display: block;
-  height: 5.6rem;
+  height: 7.2rem;
   width: auto;
 }
 .header__logo-img--on-light {
@@ -265,8 +273,8 @@ h6,
   align-items: center;
   justify-content: center;
   display: none;
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 5.2rem;
+  height: 5.2rem;
   font-size: 2.4rem;
   background: none;
   border: 1px solid var(--c-border);
@@ -299,7 +307,7 @@ h6,
 }
 .nav__link {
   display: block;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 2.4rem;
   font-weight: 500;
   border-radius: 99rem;
   transition: background 0.2s ease;
@@ -411,7 +419,7 @@ h6,
 }
 .btn:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 1rem var(--c-brand);
+  box-shadow: var(--c-glow);
 }
 .btn:active {
   transform: none;
@@ -422,8 +430,8 @@ h6,
   color: var(--c-on-accent);
 }
 .btn--ghost {
-  border-color: var(--c-border);
-  background: transparent;
+  border-color: var(--c-hover);
+  color: var(--c-hover);
 }
 .btn--ghost:hover {
   border-color: var(--c-text);
@@ -599,7 +607,7 @@ h6,
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .tabs__btn:hover {
-  border-color: var(--c-text);
+  border-color: var(--c-hover);
 }
 .tabs__btn[aria-selected=true] {
   background: var(--c-accent);

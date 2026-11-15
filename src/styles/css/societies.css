@@ -27,7 +27,7 @@
 }
 .lead:hover {
   transform: translateY(-0.4rem);
-  border-color: var(--c-accent);
+  border-color: var(--c-hover);
 }
 .lead__img {
   flex-shrink: 0;
@@ -84,7 +84,7 @@
 }
 .society:hover, .society:focus-visible {
   transform: translateY(-0.6rem);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-hover);
   border-color: var(--cat);
 }
 .society[data-category=technical] {

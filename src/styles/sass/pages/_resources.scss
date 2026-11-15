@@ -82,7 +82,7 @@ $rooms: aud, hall, lawn, sema, semb, lab, court, ground;
     transform $tr--fast;
 
   &:hover {
-    border-color: var(--c-text);
+    border-color: var(--c-hover);
   }
   &[aria-pressed='true'] {
     background: var(--c-accent);
@@ -375,7 +375,7 @@ $tilts:
     background $tr--fast,
     transform $tr--fast;
   &:hover:not(:disabled) {
-    border-color: var(--c-accent);
+    border-color: var(--c-hover);
     transform: translateX(0.6rem);
   }
   &:disabled {

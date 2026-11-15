@@ -13,7 +13,7 @@
 
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 1rem var(--c-brand);
+    box-shadow: var(--c-glow);
   }
   &:active {
     transform: none;
@@ -25,8 +25,8 @@
     color: var(--c-on-accent);
   }
   &--ghost {
-    border-color: var(--c-border);
-    background: transparent;
+    border-color: var(--c-hover);
+    color: var(--c-hover);
     &:hover {
       border-color: var(--c-text);
     }

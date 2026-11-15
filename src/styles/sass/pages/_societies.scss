@@ -28,7 +28,7 @@
     border-color $tr--fast;
   &:hover {
     transform: translateY(-0.4rem);
-    border-color: var(--c-accent);
+    border-color: var(--c-hover);
   }
 
   &__img {
@@ -91,7 +91,7 @@
   &:hover,
   &:focus-visible {
     transform: translateY(-0.6rem);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-hover);
     border-color: var(--cat);
   }
 

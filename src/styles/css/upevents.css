@@ -55,7 +55,7 @@
 }
 .event:hover, .event:focus-within {
   transform: translateY(-0.8rem);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-hover);
 }
 .event__img {
   width: 100%;

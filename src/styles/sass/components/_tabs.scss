@@ -22,7 +22,7 @@
       box-shadow $tr--fast;
 
     &:hover {
-      border-color: var(--c-text);
+      border-color: var(--c-hover);
     }
     &[aria-selected='true'] {
       background: var(--c-accent);

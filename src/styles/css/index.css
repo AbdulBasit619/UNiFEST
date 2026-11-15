@@ -194,7 +194,7 @@
 }
 .popular__item:hover {
   transform: translateX(0.8rem);
-  border-color: var(--c-accent);
+  border-color: var(--c-hover);
 }
 .popular__item::before {
   content: counter(rank);

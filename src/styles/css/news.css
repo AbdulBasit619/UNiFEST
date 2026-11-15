@@ -212,7 +212,7 @@
 }
 .sponsors__item:hover {
   transform: translate(-0.4rem, -0.4rem);
-  border-color: var(--c-accent);
+  border-color: var(--c-hover);
   box-shadow: var(--shadow-hard);
 }
 .sponsors__item:hover .sponsors__logo {
