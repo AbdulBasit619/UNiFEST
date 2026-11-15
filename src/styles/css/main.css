@@ -488,6 +488,7 @@ h6,
   border: 1px solid var(--c-border);
   border-radius: 2.8rem;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 .modal[open] {
   animation: modal-in 0.4s cubic-bezier(0.22, 1, 0.36, 1);
