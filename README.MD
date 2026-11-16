@@ -11,7 +11,7 @@ UNiFEST is a responsive, multi-page website concept that brings university event
 | **Course**            | Introduction to Information and Communication Technology (IICT)                    |
 | **University**        | FAST National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad |
 | **Program and batch** | BS Artificial Intelligence, 2026 Batch                                             |
-| **Project**           | UNiFEST — University Events Website                                                |
+| **Project**           | UNiFEST: University Network for innovation, Fun, Expression, Skills & Talent       |
 
 ## Features
 
