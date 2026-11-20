@@ -38,9 +38,6 @@ document.addEventListener('click', e => {
   const list = card.closest('.events');
   const d = card.dataset;
 
-  console.log(d);
-  console.log(field);
-
   field('img').src = d.img;
   field('category').textContent = list.dataset.label;
   field('fee').textContent = d.fee;
