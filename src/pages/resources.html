@@ -9,6 +9,13 @@
       content="Venue booking, event rules, downloadable forms and FAQs for organizing events."
     />
 
+    <script>
+      try {
+        var t = localStorage.getItem('unifest-theme');
+        if (t) document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,6 +26,14 @@
     <link rel="stylesheet" href="../styles/css/main.css" />
     <link rel="stylesheet" href="../styles/css/resources.css" />
 
+    <noscript
+      ><style>
+        .loader {
+          display: none;
+        }
+      </style></noscript
+    >
+
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -26,6 +41,24 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
+    <!-- ===== LOADER ===== -->
+    <div class="loader" role="status" aria-live="polite">
+      <div class="loader__inner">
+        <img
+          class="loader__logo loader__logo--on-dark"
+          src="./../images/logo/unifest-light.png"
+          alt=""
+        />
+        <img
+          class="loader__logo loader__logo--on-light"
+          src="./../images/logo/unifest-dark.png"
+          alt=""
+        />
+        <div class="loader__track"><span class="loader__bar"></span></div>
+        <p class="loader__text">Loading UNiFEST</p>
+      </div>
+    </div>
+
     <!-- ===== HEADER ===== -->
     <header class="header">
       <div class="container header__inner">
